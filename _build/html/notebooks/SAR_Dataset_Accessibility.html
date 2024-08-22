@@ -437,7 +437,7 @@ This procedure makes it easy to inspect the Dimensions, Coordinates, Data Variab
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 
 <span class="c1"># Providing the OPENDAP-url</span>
-<span class="n">OPENDAP_url</span> <span class="o">=</span> <span class="s1">&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000614583111_00101_51839_0000.nc&#39;</span>
+<span class="n">OPENDAP_url</span> <span class="o">=</span> <span class="s1">&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000612433111_00101_51839_0000.nc&#39;</span>
 
 <span class="c1"># Using xarray to open the dataset using the OPENDAP-url</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">OPENDAP_url</span><span class="p">)</span>
@@ -448,132 +448,401 @@ This procedure makes it easy to inspect the Dimensions, Coordinates, Data Variab
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/file_manager.py:211,</span> in <span class="ni">CachingFileManager._acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">211</span>     <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_key</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/lru_cache.py:56,</span> in <span class="ni">LRUCache.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">56</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
 
-<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000614583111_00101_51839_0000.nc&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;9b0fd3e2-c794-428f-854b-c9e36b61b315&#39;]
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
 
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
 
-<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">OPENDAP_url</span> <span class="o">=</span> <span class="s1">&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000614583111_00101_51839_0000.nc&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Using xarray to open the dataset using the OPENDAP-url</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">OPENDAP_url</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># Investigating the data as a xarray.Dataset </span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds</span>
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/api.py:571,</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, chunked_array_type, from_array_kwargs, backend_kwargs, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">559</span> <span class="n">decoders</span> <span class="o">=</span> <span class="n">_resolve_decoders_kwargs</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">560</span>     <span class="n">decode_cf</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">561</span>     <span class="n">open_backend_dataset_parameters</span><span class="o">=</span><span class="n">backend</span><span class="o">.</span><span class="n">open_dataset_parameters</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span>     <span class="n">decode_coords</span><span class="o">=</span><span class="n">decode_coords</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="n">overwrite_encoded_chunks</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;overwrite_encoded_chunks&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">571</span> <span class="n">backend_ds</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">572</span>     <span class="n">filename_or_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">573</span>     <span class="n">drop_variables</span><span class="o">=</span><span class="n">drop_variables</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">574</span>     <span class="o">**</span><span class="n">decoders</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">575</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">_dataset_from_backend_dataset</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="n">backend_ds</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">579</span>     <span class="n">filename_or_obj</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">589</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">ds</span>
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:645,</span> in <span class="ni">NetCDF4BackendEntrypoint.open_dataset</span><span class="nt">(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">624</span> <span class="k">def</span> <span class="nf">open_dataset</span><span class="p">(</span>  <span class="c1"># type: ignore[override]  # allow LSP violation, not supporting **kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">625</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">626</span>     <span class="n">filename_or_obj</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">BufferedIOBase</span> <span class="o">|</span> <span class="n">AbstractDataStore</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span>     <span class="n">autoclose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="n">filename_or_obj</span> <span class="o">=</span> <span class="n">_normalize_path</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">645</span>     <span class="n">store</span> <span class="o">=</span> <span class="n">NetCDF4DataStore</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">filename_or_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">diskless</span><span class="o">=</span><span class="n">diskless</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">persist</span><span class="o">=</span><span class="n">persist</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">657</span>     <span class="n">store_entrypoint</span> <span class="o">=</span> <span class="n">StoreBackendEntrypoint</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="k">with</span> <span class="n">close_on_error</span><span class="p">(</span><span class="n">store</span><span class="p">):</span>
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:408,</span> in <span class="ni">NetCDF4DataStore.open</span><span class="nt">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">402</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">403</span>     <span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">,</span> <span class="n">diskless</span><span class="o">=</span><span class="n">diskless</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="n">persist</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span>
-<span class="g g-Whitespace">    </span><span class="mi">404</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">405</span> <span class="n">manager</span> <span class="o">=</span> <span class="n">CachingFileManager</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">406</span>     <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">408</span> <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span> <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">)</span>
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:355,</span> in <span class="ni">NetCDF4DataStore.__init__</span><span class="nt">(self, manager, group, mode, lock, autoclose)</span>
-<span class="g g-Whitespace">    </span><span class="mi">353</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span> <span class="o">=</span> <span class="n">group</span>
-<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
-<span class="ne">--&gt; </span><span class="mi">355</span> <span class="bp">self</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">data_model</span>
-<span class="g g-Whitespace">    </span><span class="mi">356</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">filepath</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">357</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_remote</span> <span class="o">=</span> <span class="n">is_remote_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">)</span>
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:417,</span> in <span class="ni">NetCDF4DataStore.ds</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">415</span> <span class="nd">@property</span>
-<span class="g g-Whitespace">    </span><span class="mi">416</span> <span class="k">def</span> <span class="nf">ds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">417</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire</span><span class="p">()</span>
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:411,</span> in <span class="ni">NetCDF4DataStore._acquire</span><span class="nt">(self, needs_lock)</span>
-<span class="g g-Whitespace">    </span><span class="mi">410</span> <span class="k">def</span> <span class="nf">_acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">411</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">acquire_context</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span> <span class="k">as</span> <span class="n">root</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">412</span>         <span class="n">ds</span> <span class="o">=</span> <span class="n">_nc4_require_group</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span>     <span class="k">return</span> <span class="n">ds</span>
+.xr-section-item {
+  display: contents;
+}
 
-<span class="nn">File /usr/lib/python3.10/contextlib.py:135,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">135</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+.xr-section-item input {
+  display: none;
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/file_manager.py:199,</span> in <span class="ni">CachingFileManager.acquire_context</span><span class="nt">(self, needs_lock)</span>
-<span class="g g-Whitespace">    </span><span class="mi">196</span> <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
-<span class="g g-Whitespace">    </span><span class="mi">197</span> <span class="k">def</span> <span class="nf">acquire_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Context manager for acquiring a file.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">199</span>     <span class="n">file</span><span class="p">,</span> <span class="n">cached</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire_with_cache_info</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">200</span>     <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="k">yield</span> <span class="n">file</span>
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
 
-<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/file_manager.py:217,</span> in <span class="ni">CachingFileManager._acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
-<span class="ne">--&gt; </span><span class="mi">217</span> <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_opener</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span>     <span class="c1"># ensure file doesn&#39;t get overridden when opened again</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
 
-<span class="nn">File src/netCDF4/_netCDF4.pyx:2469,</span> in <span class="ni">netCDF4._netCDF4.Dataset.__init__</span><span class="nt">()</span>
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
 
-<span class="nn">File src/netCDF4/_netCDF4.pyx:2028,</span> in <span class="ni">netCDF4._netCDF4._ensure_nc_success</span><span class="nt">()</span>
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
 
-<span class="ne">OSError</span>: [Errno -90] NetCDF: file not found: &#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000614583111_00101_51839_0000.nc&#39;
-</pre></div>
-</div>
-</div>
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 39MB
+Dimensions:             (y: 602, x: 851)
+Dimensions without coordinates: y, x
+Data variables: (12/19)
+    sensor_view_angle   (y, x) float32 2MB ...
+    incidence_angle     (y, x) float32 2MB ...
+    sensor_azimuth      (y, x) float32 2MB ...
+    sigma0_VV           (y, x) float32 2MB ...
+    topographic_height  (y, x) float32 2MB ...
+    valid_land_doppler  (y, x) float32 2MB ...
+    ...                  ...
+    u_range             (y, x) float32 2MB ...
+    std_u_range         (y, x) float32 2MB ...
+    wind_direction      (y, x) float32 2MB ...
+    wind_speed          (y, x) float32 2MB ...
+    longitude           (y, x) float32 2MB ...
+    latitude            (y, x) float32 2MB ...
+Attributes: (12/75)
+    GDAL:                       GDAL 3.2.1, released 2020/12/29
+    acknowledgement:            GSAR IDL pre-processing software was develope...
+    azimuth_start_time:         2012-01-27T21:50:05.173597
+    contributor_email:          jeong-won.park@kopri.re.kr, hjoh@norceresearc...
+    contributor_institution:    Korea Polar Research Institute (KOPRI), NORCE...
+    contributor_name:           Jeong-Won Park, Harald Johnsen, Geir Engen
+    ...                         ...
+    ysamplefreq_slc:            1711.9144385026736
+    ysize:                      629
+    ytime:                      2012-01-27T21:50:05.173597Z
+    ytime_slc:                  2012-01-27T21:50:04.077748
+    summary_no:                 Kalibrert geofysisk Dopplerskift fra ENVISAT ...
+    title_no:                   Kalibrert geofysisk ENVISAT ASAR Dopplerskift...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-165b624a-346b-4df4-84d1-1c9862de8679' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-165b624a-346b-4df4-84d1-1c9862de8679' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>y</span>: 602</li><li><span>x</span>: 851</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-3a9df342-cfda-427f-ab92-f18763e761d7' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-3a9df342-cfda-427f-ab92-f18763e761d7' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-b6555abf-4c53-4fed-9104-9ee374cfca85' class='xr-section-summary-in' type='checkbox'  ><label for='section-b6555abf-4c53-4fed-9104-9ee374cfca85' class='xr-section-summary' >Data variables: <span>(19)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sensor_view_angle</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6215510a-5b03-4a1c-9608-a95df28cabb0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6215510a-5b03-4a1c-9608-a95df28cabb0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c66f211d-24d2-4a1e-82c1-0b0a1690178f' class='xr-var-data-in' type='checkbox'><label for='data-c66f211d-24d2-4a1e-82c1-0b0a1690178f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sensor View Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>sensor_view_angle</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>standard_name :</span></dt><dd>sensor_view_angle</dd><dt><span>units :</span></dt><dd>degree</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>incidence_angle</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e18d23f5-4c4d-42a0-af37-e9d9aeeb9c8c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e18d23f5-4c4d-42a0-af37-e9d9aeeb9c8c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3bb49d38-1d57-4985-b9d2-f4640a308ed5' class='xr-var-data-in' type='checkbox'><label for='data-3bb49d38-1d57-4985-b9d2-f4640a308ed5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Incidence Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>incidence_angle</dd><dt><span>short_name :</span></dt><dd>incidence_angle</dd><dt><span>SourceBand :</span></dt><dd>2</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>standard_name :</span></dt><dd>angle_of_incidence</dd><dt><span>units :</span></dt><dd>degrees</dd><dt><span>wkv :</span></dt><dd>angle_of_incidence</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sensor_azimuth</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-48f60e28-43f7-4879-adae-1d0799d8f44d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-48f60e28-43f7-4879-adae-1d0799d8f44d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3e47d2c5-4d00-4a0a-96e4-4d823ebd9fef' class='xr-var-data-in' type='checkbox'><label for='data-3e47d2c5-4d00-4a0a-96e4-4d823ebd9fef' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sensor Azimuth Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>sensor_azimuth</dd><dt><span>short_name :</span></dt><dd>sensor_azimuth</dd><dt><span>SourceBand :</span></dt><dd>3</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>standard_name :</span></dt><dd>sensor_azimuth_angle</dd><dt><span>units :</span></dt><dd>degrees</dd><dt><span>wkv :</span></dt><dd>sensor_azimuth_angle</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sigma0_VV</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1d078fbb-f574-4765-9719-b6bd31454173' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1d078fbb-f574-4765-9719-b6bd31454173' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-017d86bf-b82e-472c-aafd-a01c6abfd033' class='xr-var-data-in' type='checkbox'><label for='data-017d86bf-b82e-472c-aafd-a01c6abfd033' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Normalized Radar Cross Section</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>0 0.1</dd><dt><span>name :</span></dt><dd>sigma0_VV</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>short_name :</span></dt><dd>sigma0</dd><dt><span>SourceBand :</span></dt><dd>4</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>standard_name :</span></dt><dd>surface_backwards_scattering_coefficient_of_radar_wave</dd><dt><span>suffix :</span></dt><dd>VV</dd><dt><span>units :</span></dt><dd>m/m</dd><dt><span>wkv :</span></dt><dd>surface_backwards_scattering_coefficient_of_radar_wave</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>topographic_height</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7dbe4f9b-3d7d-4bc0-8c94-96c4c9e25564' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7dbe4f9b-3d7d-4bc0-8c94-96c4c9e25564' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7177feac-22cd-4fb9-82d0-5e8d5b63325c' class='xr-var-data-in' type='checkbox'><label for='data-7177feac-22cd-4fb9-82d0-5e8d5b63325c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>GDAL Band Number 10</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.topo</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>name :</span></dt><dd>topographic_height</dd><dt><span>SourceBand :</span></dt><dd>5</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_land_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-b9b8e93f-036f-40c0-8f2d-1077277b6545' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b9b8e93f-036f-40c0-8f2d-1077277b6545' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-617f102a-66c8-4e3f-b896-ae9e71c73d55' class='xr-var-data-in' type='checkbox'><label for='data-617f102a-66c8-4e3f-b896-ae9e71c73d55' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid land pixels (pixels near water boundaries have been masked)</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>name :</span></dt><dd>valid_land_doppler</dd><dt><span>SourceBand :</span></dt><dd>6</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_sea_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-19598ce9-e2e5-4c29-b333-3d1fb6bc4a67' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-19598ce9-e2e5-4c29-b333-3d1fb6bc4a67' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-db228648-79be-49ec-aae6-09ce0da22e2b' class='xr-var-data-in' type='checkbox'><label for='data-db228648-79be-49ec-aae6-09ce0da22e2b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid water covering pixels (near land boundaries have been masked)</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>name :</span></dt><dd>valid_sea_doppler</dd><dt><span>SourceBand :</span></dt><dd>7</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5d4836e4-c142-4a91-be56-c1ab75039b32' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5d4836e4-c142-4a91-be56-c1ab75039b32' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d6a8189d-c7a5-4965-84fa-cb1a4e7aaa3a' class='xr-var-data-in' type='checkbox'><label for='data-d6a8189d-c7a5-4965-84fa-cb1a4e7aaa3a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid pixels</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>name :</span></dt><dd>valid_doppler</dd><dt><span>SourceBand :</span></dt><dd>8</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fe</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d83b88a8-e3ef-4bde-950a-5fc22e047bdc' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d83b88a8-e3ef-4bde-950a-5fc22e047bdc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9cd9f9dd-f37d-4e5c-b360-1d0638d7275a' class='xr-var-data-in' type='checkbox'><label for='data-9cd9f9dd-f37d-4e5c-b360-1d0638d7275a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler frequency shift due to electronic mispointing</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-200 200</dd><dt><span>name :</span></dt><dd>fe</dd><dt><span>SourceBand :</span></dt><dd>9</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fgeo</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-401b827f-fb8f-42ac-a5f9-711c9cf3a9b9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-401b827f-fb8f-42ac-a5f9-711c9cf3a9b9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4094b5e4-b61f-4156-9781-7749a65decf4' class='xr-var-data-in' type='checkbox'><label for='data-4094b5e4-b61f-4156-9781-7749a65decf4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler frequency shift due to orbit geometry</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-200 200</dd><dt><span>name :</span></dt><dd>fgeo</dd><dt><span>SourceBand :</span></dt><dd>10</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fdg</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2b5475b7-38a1-4ee9-b42d-8c9314e8894a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2b5475b7-38a1-4ee9-b42d-8c9314e8894a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d5ffa7a7-2afa-4eb3-9227-948365f7c2c9' class='xr-var-data-in' type='checkbox'><label for='data-d5ffa7a7-2afa-4eb3-9227-948365f7c2c9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Radar Doppler frequency shift due to surface velocity</dd><dt><span>apriori_offset :</span></dt><dd>19.63, 19.15, 20.26, 24.78, 16.75</dd><dt><span>apriori_offset_corrected :</span></dt><dd>cdop, cdop, cdop, cdop, cdop</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-60 60</dd><dt><span>name :</span></dt><dd>fdg</dd><dt><span>offset :</span></dt><dd>20.11, 20.11, 20.11, 20.11, 20.11</dd><dt><span>offset_corrected :</span></dt><dd>cdop, cdop, cdop, cdop, cdop</dd><dt><span>SourceBand :</span></dt><dd>11</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fww</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f47394fe-955e-4982-86b8-4b376d1244b1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f47394fe-955e-4982-86b8-4b376d1244b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-878721b4-ddff-41e1-8cc9-9b167be9a9a0' class='xr-var-data-in' type='checkbox'><label for='data-878721b4-ddff-41e1-8cc9-9b167be9a9a0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Radar Doppler frequency shift due to wind waves</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-60 60</dd><dt><span>name :</span></dt><dd>fww</dd><dt><span>SourceBand :</span></dt><dd>12</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>std_fww</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1aa178b4-9988-468e-8021-18d36ac0028e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1aa178b4-9988-468e-8021-18d36ac0028e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-906c497c-2a3c-43e6-bba7-34e536292e56' class='xr-var-data-in' type='checkbox'><label for='data-906c497c-2a3c-43e6-bba7-34e536292e56' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard deviation of radar Doppler frequency shift due to wind waves</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.thermal</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>0 10</dd><dt><span>name :</span></dt><dd>std_fww</dd><dt><span>SourceBand :</span></dt><dd>13</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>u_range</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-33a29199-e5d0-4c87-a7f2-0b3c877d882e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-33a29199-e5d0-4c87-a7f2-0b3c877d882e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ae1a2ebf-5a00-4cbd-8d7d-95e2ffaf8f76' class='xr-var-data-in' type='checkbox'><label for='data-ae1a2ebf-5a00-4cbd-8d7d-95e2ffaf8f76' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea surface current velocity in range direction</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-1.5 1.5</dd><dt><span>name :</span></dt><dd>u_range</dd><dt><span>SourceBand :</span></dt><dd>14</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>m s-1</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>std_u_range</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5fccaec8-fcd5-4663-8b17-8f2dab0f45a8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5fccaec8-fcd5-4663-8b17-8f2dab0f45a8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-152ffffe-97d9-4375-bffd-7673a9c70b3b' class='xr-var-data-in' type='checkbox'><label for='data-152ffffe-97d9-4375-bffd-7673a9c70b3b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard deviation of sea surface current velocity in range direction</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.thermal</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>0 0.8</dd><dt><span>name :</span></dt><dd>std_u_range</dd><dt><span>SourceBand :</span></dt><dd>15</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>m s-1</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_direction</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-80d49551-34b5-49e3-b336-fcd91bbbaefa' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-80d49551-34b5-49e3-b336-fcd91bbbaefa' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-40c7eb7f-6350-4d9c-9837-89f252e18bcd' class='xr-var-data-in' type='checkbox'><label for='data-40c7eb7f-6350-4d9c-9837-89f252e18bcd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>SAR look relative wind from direction used in CDOP calculation</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.phase</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/wind/2012-01.nc</dd><dt><span>minmax :</span></dt><dd>0 360</dd><dt><span>name :</span></dt><dd>wind_direction</dd><dt><span>SourceBand :</span></dt><dd>16</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/XYMEKKZ7EH.vrt</dd><dt><span>units :</span></dt><dd>degree</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_speed</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ee562080-1762-44b5-8096-8f1c628de8a5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ee562080-1762-44b5-8096-8f1c628de8a5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c96bfcc-c703-4461-9ec6-9e1693da4ea1' class='xr-var-data-in' type='checkbox'><label for='data-6c96bfcc-c703-4461-9ec6-9e1693da4ea1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind speed used in CDOP calculation</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.speed</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/wind/2012-01.nc</dd><dt><span>minmax :</span></dt><dd>0 20</dd><dt><span>name :</span></dt><dd>wind_speed</dd><dt><span>short_name :</span></dt><dd>W</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/7WRSEHO7Y4.vrt</dd><dt><span>standard_name :</span></dt><dd>wind_speed</dd><dt><span>units :</span></dt><dd>m s-1</dd><dt><span>wkv :</span></dt><dd>wind_speed</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-377d205a-b469-4618-ab49-c09d423bcfc4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-377d205a-b469-4618-ab49-c09d423bcfc4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d052c94d-3a94-4fb5-8107-3ac7a1d60a07' class='xr-var-data-in' type='checkbox'><label for='data-d052c94d-3a94-4fb5-8107-3ac7a1d60a07' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>colormap :</span></dt><dd>jet</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-180 180</dd><dt><span>name :</span></dt><dd>longitude</dd><dt><span>short_name :</span></dt><dd>longitude</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/MQ2RSEMZSF.vrt</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>wkv :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ee76c29b-ad10-49ee-a467-49bc22f52ced' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ee76c29b-ad10-49ee-a467-49bc22f52ced' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9b60a620-1ded-4ec4-8a22-bb0d305e5d16' class='xr-var-data-in' type='checkbox'><label for='data-9b60a620-1ded-4ec4-8a22-bb0d305e5d16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>colormap :</span></dt><dd>jet</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-90 90</dd><dt><span>name :</span></dt><dd>latitude</dd><dt><span>short_name :</span></dt><dd>latitude</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/R5LQ3HZUOY.vrt</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>wkv :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-de194c89-6f3d-4bfe-b60f-7eefcdf155c1' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-de194c89-6f3d-4bfe-b60f-7eefcdf155c1' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-a80cf879-56c6-430c-8309-87038286f5ab' class='xr-section-summary-in' type='checkbox'  ><label for='section-a80cf879-56c6-430c-8309-87038286f5ab' class='xr-section-summary' >Attributes: <span>(75)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GDAL :</span></dt><dd>GDAL 3.2.1, released 2020/12/29</dd><dt><span>acknowledgement :</span></dt><dd>GSAR IDL pre-processing software was developed by NORCE. The project was supported by the Norwegian Space Agency and the ESA Network of Resources Initiative.</dd><dt><span>azimuth_start_time :</span></dt><dd>2012-01-27T21:50:05.173597</dd><dt><span>contributor_email :</span></dt><dd>jeong-won.park@kopri.re.kr, hjoh@norceresearch.no, geen@norceresearch.no</dd><dt><span>contributor_institution :</span></dt><dd>Korea Polar Research Institute (KOPRI), NORCE, NORCE</dd><dt><span>contributor_name :</span></dt><dd>Jeong-Won Park, Harald Johnsen, Geir Engen</dd><dt><span>contributor_role :</span></dt><dd>Investigator, Investigator, Investigator</dd><dt><span>Conventions :</span></dt><dd>CF-1.8, ACDD-1.3</dd><dt><span>creator_email :</span></dt><dd>mortenwh@met.no</dd><dt><span>creator_institution :</span></dt><dd>Norwegian Meteorological Institute (MET Norway)</dd><dt><span>creator_name :</span></dt><dd>Morten Wergeland Hansen</dd><dt><span>creator_role :</span></dt><dd>Investigator</dd><dt><span>creator_type :</span></dt><dd>person</dd><dt><span>dataset_production_status :</span></dt><dd>Complete</dd><dt><span>date_created :</span></dt><dd>2024-08-21T10:16:00.894589+00:00</dd><dt><span>date_created_type :</span></dt><dd>Created</dd><dt><span>doi :</span></dt><dd>https://doi.org/10.57780/esa-56fb232</dd><dt><span>doppler :</span></dt><dd>4c568ea84680133d6b00be74ca2e0313421e28e7</dd><dt><span>doppler_resource :</span></dt><dd>https://github.com/mortenwh/doppler</dd><dt><span>geospatial_bounds :</span></dt><dd>POLYGON ((27.79 -173.37, 27.91 -174.02, 28.01 -174.56, 28.09 -175.00, 28.16 -175.41, 28.22 -175.80, 28.29 -176.17, 28.34 -176.47, 28.38 -176.75, 28.44 -177.08, 28.49 -177.40, 28.49 -177.40, 28.13 -177.47, 27.77 -177.55, 27.40 -177.62, 27.04 -177.70, 26.68 -177.77, 26.32 -177.84, 25.96 -177.92, 25.60 -177.99, 25.23 -178.06, 24.87 -178.14, 24.87 -178.14, 24.81 -177.83, 24.76 -177.51, 24.71 -177.24, 24.66 -176.95, 24.59 -176.59, 24.53 -176.21, 24.46 -175.82, 24.37 -175.39, 24.28 -174.87, 24.15 -174.24, 24.15 -174.24, 24.52 -174.16, 24.89 -174.07, 25.25 -173.98, 25.61 -173.90, 25.97 -173.81, 26.34 -173.72, 26.70 -173.63, 27.06 -173.55, 27.42 -173.46, 27.79 -173.37))</dd><dt><span>geospatial_bounds_crs :</span></dt><dd>EPSG:4326</dd><dt><span>geospatial_lat_max :</span></dt><dd>28.031118</dd><dt><span>geospatial_lat_min :</span></dt><dd>24.13118</dd><dt><span>geospatial_lon_max :</span></dt><dd>-173.36783</dd><dt><span>geospatial_lon_min :</span></dt><dd>-175.49998</dd><dt><span>history :</span></dt><dd>2024-08-21T10:16:00.862210+00:00: sar_doppler.utils.create_merged_swaths(ds, EPSG=4326)
+2024-08-21T10:16:00.894516+00:00: sar_doppler.models.Dataset.objects.export2netcdf(n, ds, filename=&#x27;/lustre/storeB/project/fou/fd/project/sar-doppler/products/sar_doppler/merged/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000612433111_00101_51839_0000.nc&#x27;)</dd><dt><span>id :</span></dt><dd>0f79d40f-f312-4b84-b609-e9da275ec88e</dd><dt><span>institution :</span></dt><dd>Norwegian Meteorological Institute (MET Norway)</dd><dt><span>instrument :</span></dt><dd>Advanced Synthetic Aperture Radar (ASAR)</dd><dt><span>instrument_vocabulary :</span></dt><dd>https://space.oscar.wmo.int/instruments/view/asar</dd><dt><span>iso_topic_category :</span></dt><dd>oceans</dd><dt><span>keywords :</span></dt><dd>GCMDSK:RADAR BACKSCATTER,GCMDSK:RADAR IMAGERY,GCMDSK:RADIAL VELOCITY,GEMET:Oceanographic geographical features, NORTHEMES:Weather and climate</dd><dt><span>keywords_vocabulary :</span></dt><dd>GCMDSK:NASA/GCMD Earth Science Keywords:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords, GEMET:GEMET - INSPIRE themes:https://www.eionet.europa.eu/gemet/en/inspire-themes/, NORTHEMES:GeoNorge Themes:https://register.geonorge.no/metadata-kodelister/nasjonal-temainndeling</dd><dt><span>license :</span></dt><dd>https://earth.esa.int/eogateway/documents/20142/1564626/ESA-Data-Policy-ESA-PB-EO-2010-54.pdf (ESA earth observation data policy)</dd><dt><span>naming_authority :</span></dt><dd>no.met</dd><dt><span>nansat :</span></dt><dd>7c5af871a5eae24d741d1253288392bfbe70fe4a</dd><dt><span>NANSAT_GeoTransform :</span></dt><dd>(0.0| 1.0| 0.0| 0.0| 0.0| 1.0)</dd><dt><span>NANSAT_Projection :</span></dt><dd>GEOGCS[&amp;WGS 84&amp;|DATUM[&amp;WGS_1984&amp;|SPHEROID[&amp;WGS 84&amp;|6378137|298.257223563|AUTHORITY[&amp;EPSG&amp;|&amp;7030&amp;]]|AUTHORITY[&amp;EPSG&amp;|&amp;6326&amp;]]|PRIMEM[&amp;Greenwich&amp;|0|AUTHORITY[&amp;EPSG&amp;|&amp;8901&amp;]]|UNIT[&amp;degree&amp;|0.0174532925199433|AUTHORITY[&amp;EPSG&amp;|&amp;9122&amp;]]|AXIS[&amp;Latitude&amp;|NORTH]|AXIS[&amp;Longitude&amp;|EAST]|AUTHORITY[&amp;EPSG&amp;|&amp;4326&amp;]]</dd><dt><span>nansat_resource :</span></dt><dd>https://github.com/mortenwh/nansat</dd><dt><span>orbit_direction :</span></dt><dd>descending</dd><dt><span>originating_file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/2012/01/27/RVL_ASA_WS_20120127215005174.gsar</dd><dt><span>platform :</span></dt><dd>Environmental Satellite (Envisat)</dd><dt><span>platform_vocabulary :</span></dt><dd>https://space.oscar.wmo.int/satelliteprogrammes/view/envisat</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>processing_level :</span></dt><dd>Scientific</dd><dt><span>project :</span></dt><dd>Norwegian Space Agency project JOP.06.20.2: Reprocessing and analysis of historical data for future operationalization of Doppler shifts from SAR, NMI/ESA-NoR Envisat ASAR Doppler centroid shift processing ID220131, Improved knowledge of high latitude ocean circulation with Synthetic Aperture Radar (ESA Prodex ISAR), Drift estimation of sea ice in the Arctic Ocean and sub-Arctic Seas (ESA Prodex DESIce)</dd><dt><span>publisher_email :</span></dt><dd>data-management-group@met.no</dd><dt><span>publisher_name :</span></dt><dd>Norwegian Meteorological Institute</dd><dt><span>publisher_type :</span></dt><dd>institution</dd><dt><span>publisher_url :</span></dt><dd>https://www.met.no/</dd><dt><span>radarfreq :</span></dt><dd>5331004416.0</dd><dt><span>sar_doppler :</span></dt><dd>e88a43c31f5d9e658c64e22f862b5a229404a390</dd><dt><span>sar_doppler_resource :</span></dt><dd>https://github.com/mortenwh/django-geo-spaas-sar-doppler</dd><dt><span>source :</span></dt><dd>Space Borne Instrument</dd><dt><span>spatial_representation :</span></dt><dd>grid</dd><dt><span>summary :</span></dt><dd>Calibrated geophysical range Doppler frequency shift retrievals from an ENVISAT ASAR wide-swath acqusition obtained on 2012-01-27T21:50:05.161103+00:00. The geophysical Doppler shift depends on the ocean wave-state and the sea surface current. In the absence of current, the geophysical Doppler shift is mostly related to the local wind speed and direction. The present dataset is in VV polarization.</dd><dt><span>summary_lang :</span></dt><dd>en</dd><dt><span>time_coverage_end :</span></dt><dd>2012-01-27T21:51:07.925870+00:00</dd><dt><span>time_coverage_start :</span></dt><dd>2012-01-27T21:50:04.077748+00:00</dd><dt><span>title :</span></dt><dd>Calibrated geophysical ENVISAT ASAR wide-swath range Doppler frequency shift retrievals in VV polarisation, 2012-01-27T21:50:05.161103+00:00</dd><dt><span>title_lang :</span></dt><dd>en</dd><dt><span>xoffset_slc :</span></dt><dd>56</dd><dt><span>xsamplefreq :</span></dt><dd>600240.0</dd><dt><span>xsamplefreq_slc :</span></dt><dd>19207680.0</dd><dt><span>xsize :</span></dt><dd>190</dd><dt><span>xtime :</span></dt><dd>0.005326083371617</dd><dt><span>xtime_slc :</span></dt><dd>0.00531166205681</dd><dt><span>yoffset_slc :</span></dt><dd>0</dd><dt><span>ysamplefreq :</span></dt><dd>10.189966895849247</dd><dt><span>ysamplefreq_slc :</span></dt><dd>1711.9144385026736</dd><dt><span>ysize :</span></dt><dd>629</dd><dt><span>ytime :</span></dt><dd>2012-01-27T21:50:05.173597Z</dd><dt><span>ytime_slc :</span></dt><dd>2012-01-27T21:50:04.077748</dd><dt><span>summary_no :</span></dt><dd>Kalibrert geofysisk Dopplerskift fra ENVISAT ASAR målt 2012-01-27T21:50:05.161103+00:00. Det geofysiske Dopplerskiftet avhenger av havbølgetilstand og overflatestrøm. Ved fravær av strøm er det geofysiske Dopplerskiftet stort sett relatert til den lokale vindhastigheten og dens retning. Foreliggende datasett er i VV polarisering.</dd><dt><span>title_no :</span></dt><dd>Kalibrert geofysisk ENVISAT ASAR Dopplerskift i full bildebredde og VV polarisering, 2012-01-27T21:50:05.161103+00:00</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 </section>
