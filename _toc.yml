@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+title: SAR Doppler User Guide Document
+
+#chapters:
+#- file: markdown
+#- file: notebooks
+#- file: markdown-notebooks
+
+chapters:
+- file: notebooks/Plot_Data_on_a_Map.ipynb
+- file: notebooks/SAR_Dataset_Accessibility.ipynb
+- file: notebooks/Parameter_Descriptions.ipynb
+

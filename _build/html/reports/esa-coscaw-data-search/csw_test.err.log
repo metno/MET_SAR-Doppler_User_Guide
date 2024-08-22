@@ -1,0 +1,67 @@
+Traceback (most recent call last):
+  File "/home/josteines/src/.venv/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/josteines/src/.venv/lib/python3.10/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/josteines/src/.venv/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/josteines/src/.venv/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/josteines/src/.venv/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/josteines/src/.venv/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from fadg.find_and_collocate import SearchCSW
+from datetime import datetime
+
+# time_str = '02-29-2012'  # format '%m-%d-%Y' for some reason... # 21:41:35.177728
+time_str = '08-07-2012 00.00.00' 
+time = datetime.strptime(time_str, '%m-%d-%Y %A').date()
+print(type(time))
+dt = 192
+# dt = 24
+# dt = 10000
+
+# Find all SAR data dt/2 hours back in time from now:
+sar = SearchCSW(time = time, dt=dt, text="SAR", endpoint="https://data.csw.met.no/csw")
+# sar = SearchCSW(dt = dt, text="SAR", endpoint="https://data.csw.met.no/csw") # Worked but got sarwind data (as should have been expected)
+
+# Find all SAR data dt/2 hours back in time from now:
+# sar = SearchCSW(time = time, dt=dt, text="doppler", endpoint="https://data.csw.met.no/csw")
+# sar = SearchCSW(text="asar", endpoint="https://data.csw.met.no/csw") # Did not work
+# sar = SearchCSW(text="SAR", endpoint="https://data.met.no/") # Did not work
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[1], line 6[0m
+[1;32m      4[0m [38;5;66;03m# time_str = '02-29-2012'  # format '%m-%d-%Y' for some reason... # 21:41:35.177728[39;00m
+[1;32m      5[0m time_str [38;5;241m=[39m [38;5;124m'[39m[38;5;124m08-07-2012 00.00.00[39m[38;5;124m'[39m 
+[0;32m----> 6[0m time [38;5;241m=[39m [43mdatetime[49m[38;5;241;43m.[39;49m[43mstrptime[49m[43m([49m[43mtime_str[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43m%[39;49m[38;5;124;43mm-[39;49m[38;5;132;43;01m%d[39;49;00m[38;5;124;43m-[39;49m[38;5;124;43m%[39;49m[38;5;124;43mY [39;49m[38;5;124;43m%[39;49m[38;5;124;43mA[39;49m[38;5;124;43m'[39;49m[43m)[49m[38;5;241m.[39mdate()
+[1;32m      7[0m [38;5;28mprint[39m([38;5;28mtype[39m(time))
+[1;32m      8[0m dt [38;5;241m=[39m [38;5;241m192[39m
+
+File [0;32m/usr/lib/python3.10/_strptime.py:568[0m, in [0;36m_strptime_datetime[0;34m(cls, data_string, format)[0m
+[1;32m    565[0m [38;5;28;01mdef[39;00m [38;5;21m_strptime_datetime[39m([38;5;28mcls[39m, data_string, [38;5;28mformat[39m[38;5;241m=[39m[38;5;124m"[39m[38;5;132;01m%a[39;00m[38;5;124m [39m[38;5;124m%[39m[38;5;124mb [39m[38;5;132;01m%d[39;00m[38;5;124m [39m[38;5;124m%[39m[38;5;124mH:[39m[38;5;124m%[39m[38;5;124mM:[39m[38;5;124m%[39m[38;5;124mS [39m[38;5;124m%[39m[38;5;124mY[39m[38;5;124m"[39m):
+[1;32m    566[0m [38;5;250m    [39m[38;5;124;03m"""Return a class cls instance based on the input string and the[39;00m
+[1;32m    567[0m [38;5;124;03m    format string."""[39;00m
+[0;32m--> 568[0m     tt, fraction, gmtoff_fraction [38;5;241m=[39m [43m_strptime[49m[43m([49m[43mdata_string[49m[43m,[49m[43m [49m[38;5;28;43mformat[39;49m[43m)[49m
+[1;32m    569[0m     tzname, gmtoff [38;5;241m=[39m tt[[38;5;241m-[39m[38;5;241m2[39m:]
+[1;32m    570[0m     args [38;5;241m=[39m tt[:[38;5;241m6[39m] [38;5;241m+[39m (fraction,)
+
+File [0;32m/usr/lib/python3.10/_strptime.py:349[0m, in [0;36m_strptime[0;34m(data_string, format)[0m
+[1;32m    347[0m found [38;5;241m=[39m format_regex[38;5;241m.[39mmatch(data_string)
+[1;32m    348[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m found:
+[0;32m--> 349[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124m"[39m[38;5;124mtime data [39m[38;5;132;01m%r[39;00m[38;5;124m does not match format [39m[38;5;132;01m%r[39;00m[38;5;124m"[39m [38;5;241m%[39m
+[1;32m    350[0m                      (data_string, [38;5;28mformat[39m))
+[1;32m    351[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(data_string) [38;5;241m!=[39m found[38;5;241m.[39mend():
+[1;32m    352[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124m"[39m[38;5;124munconverted data remains: [39m[38;5;132;01m%s[39;00m[38;5;124m"[39m [38;5;241m%[39m
+[1;32m    353[0m                       data_string[found[38;5;241m.[39mend():])
+
+[0;31mValueError[0m: time data '08-07-2012 00.00.00' does not match format '%m-%d-%Y %A'
+

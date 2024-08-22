@@ -1,0 +1,1160 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Parameter description &#8212; SAR Doppler User Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/parameters';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="SAR Dataset Accessibility" href="SAR_Dataset_Accessibility.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="SAR Doppler User Guide - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="SAR Doppler User Guide - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    SAR Doppler User Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1st_nb.html">Here we are just investigating the datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAR_Dataset_Accessibility.html">SAR Dataset Accessibility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Parameter description</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/parameters.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/parameters.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parameter description</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-view-angle">sensor_view_angle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incidence-angle">incidence_angle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-azimuth">sensor_azimuth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sigmao-vv">sigmaO_VV</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topographic-height">topographic_height</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-land-doppler">valid_land_doppler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-sea-doppler">valid_sea_doppler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-doppler">valid_doppler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fe">fe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fgeo">fgeo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fdg">fdg</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fww">fww</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#std-fww">std_fww</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-direction">wind_direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-speed">wind_speed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#longitude">longitude</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latitude">latitude</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/04/08/ASA_WSDV2PRNMI20120408_110444_000618683113_00267_52867_0000.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/file_manager.py:211,</span> in <span class="ni">CachingFileManager._acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">211</span>     <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_key</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/lru_cache.py:56,</span> in <span class="ni">LRUCache.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">56</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/04/08/ASA_WSDV2PRNMI20120408_110444_000618683113_00267_52867_0000.nc&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False)), &#39;8795e460-3c31-4009-a346-2e04b31424e1&#39;]
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/04/08/ASA_WSDV2PRNMI20120408_110444_000618683113_00267_52867_0000.nc&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/api.py:571,</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, chunked_array_type, from_array_kwargs, backend_kwargs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">559</span> <span class="n">decoders</span> <span class="o">=</span> <span class="n">_resolve_decoders_kwargs</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span>     <span class="n">decode_cf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span>     <span class="n">open_backend_dataset_parameters</span><span class="o">=</span><span class="n">backend</span><span class="o">.</span><span class="n">open_dataset_parameters</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span>     <span class="n">decode_coords</span><span class="o">=</span><span class="n">decode_coords</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="n">overwrite_encoded_chunks</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;overwrite_encoded_chunks&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">571</span> <span class="n">backend_ds</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span>     <span class="n">filename_or_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span>     <span class="n">drop_variables</span><span class="o">=</span><span class="n">drop_variables</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span>     <span class="o">**</span><span class="n">decoders</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">575</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">_dataset_from_backend_dataset</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="n">backend_ds</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">579</span>     <span class="n">filename_or_obj</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">589</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">ds</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:645,</span> in <span class="ni">NetCDF4BackendEntrypoint.open_dataset</span><span class="nt">(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">624</span> <span class="k">def</span> <span class="nf">open_dataset</span><span class="p">(</span>  <span class="c1"># type: ignore[override]  # allow LSP violation, not supporting **kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">625</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">626</span>     <span class="n">filename_or_obj</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="n">BufferedIOBase</span> <span class="o">|</span> <span class="n">AbstractDataStore</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span>     <span class="n">autoclose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="n">filename_or_obj</span> <span class="o">=</span> <span class="n">_normalize_path</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">645</span>     <span class="n">store</span> <span class="o">=</span> <span class="n">NetCDF4DataStore</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">filename_or_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">diskless</span><span class="o">=</span><span class="n">diskless</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">persist</span><span class="o">=</span><span class="n">persist</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">657</span>     <span class="n">store_entrypoint</span> <span class="o">=</span> <span class="n">StoreBackendEntrypoint</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="k">with</span> <span class="n">close_on_error</span><span class="p">(</span><span class="n">store</span><span class="p">):</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:408,</span> in <span class="ni">NetCDF4DataStore.open</span><span class="nt">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">402</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">403</span>     <span class="n">clobber</span><span class="o">=</span><span class="n">clobber</span><span class="p">,</span> <span class="n">diskless</span><span class="o">=</span><span class="n">diskless</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="n">persist</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span> <span class="n">manager</span> <span class="o">=</span> <span class="n">CachingFileManager</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">406</span>     <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span> <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">408</span> <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">manager</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span> <span class="n">autoclose</span><span class="o">=</span><span class="n">autoclose</span><span class="p">)</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:355,</span> in <span class="ni">NetCDF4DataStore.__init__</span><span class="nt">(self, manager, group, mode, lock, autoclose)</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span> <span class="o">=</span> <span class="n">group</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
+<span class="ne">--&gt; </span><span class="mi">355</span> <span class="bp">self</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">data_model</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">filepath</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">357</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_remote</span> <span class="o">=</span> <span class="n">is_remote_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_filename</span><span class="p">)</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:417,</span> in <span class="ni">NetCDF4DataStore.ds</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">415</span> <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">416</span> <span class="k">def</span> <span class="nf">ds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">417</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire</span><span class="p">()</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/netCDF4_.py:411,</span> in <span class="ni">NetCDF4DataStore._acquire</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">410</span> <span class="k">def</span> <span class="nf">_acquire</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">411</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">acquire_context</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span> <span class="k">as</span> <span class="n">root</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">412</span>         <span class="n">ds</span> <span class="o">=</span> <span class="n">_nc4_require_group</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">413</span>     <span class="k">return</span> <span class="n">ds</span>
+
+<span class="nn">File /usr/lib/python3.10/contextlib.py:135,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">135</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/file_manager.py:199,</span> in <span class="ni">CachingFileManager.acquire_context</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">196</span> <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span> <span class="k">def</span> <span class="nf">acquire_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Context manager for acquiring a file.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">199</span>     <span class="n">file</span><span class="p">,</span> <span class="n">cached</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire_with_cache_info</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span>     <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="k">yield</span> <span class="n">file</span>
+
+<span class="nn">File ~/src/.venv/lib/python3.10/site-packages/xarray/backends/file_manager.py:217,</span> in <span class="ni">CachingFileManager._acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span>     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">216</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
+<span class="ne">--&gt; </span><span class="mi">217</span> <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_opener</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span>     <span class="c1"># ensure file doesn&#39;t get overridden when opened again</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+
+<span class="nn">File src/netCDF4/_netCDF4.pyx:2469,</span> in <span class="ni">netCDF4._netCDF4.Dataset.__init__</span><span class="nt">()</span>
+
+<span class="nn">File src/netCDF4/_netCDF4.pyx:2028,</span> in <span class="ni">netCDF4._netCDF4._ensure_nc_success</span><span class="nt">()</span>
+
+<span class="ne">OSError</span>: [Errno -90] NetCDF: file not found: &#39;https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/04/08/ASA_WSDV2PRNMI20120408_110444_000618683113_00267_52867_0000.nc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:             (y: 609, x: 858)
+Dimensions without coordinates: y, x
+Data variables: (12/17)
+    sensor_view_angle   (y, x) float32 ...
+    incidence_angle     (y, x) float32 ...
+    sensor_azimuth      (y, x) float32 ...
+    sigma0_VV           (y, x) float32 ...
+    topographic_height  (y, x) float32 ...
+    valid_land_doppler  (y, x) float32 ...
+    ...                  ...
+    fww                 (y, x) float32 ...
+    std_fww             (y, x) float32 ...
+    wind_direction      (y, x) float32 ...
+    wind_speed          (y, x) float32 ...
+    longitude           (y, x) float32 ...
+    latitude            (y, x) float32 ...
+Attributes: (12/74)
+    GDAL:                       GDAL 3.2.1, released 2020/12/29
+    acknowledgement:            GSAR IDL pre-processing software was develope...
+    azimuth_start_time:         2012-04-08T11:04:44.164923
+    contributor_email:          jeong-won.park@kopri.re.kr, hjoh@norceresearc...
+    contributor_institution:    Korea Polar Research Institute (KOPRI), NORCE...
+    contributor_name:           Jeong-Won Park, Harald Johnsen, Geir Engen
+    ...                         ...
+    ysamplefreq_slc:            1711.9144385026736
+    ysize:                      632
+    ytime:                      2012-04-08T11:04:44.164923Z
+    ytime_slc:                  2012-04-08T11:04:42.997809
+    summary_no:                 Kalibrert geofysisk Dopplerskift fra ENVISAT ...
+    title_no:                   Kalibrert geofysisk ENVISAT ASAR Dopplerskift...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-e05d93b6-ff51-406a-bee5-28ebdb8f8e42' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-e05d93b6-ff51-406a-bee5-28ebdb8f8e42' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>y</span>: 609</li><li><span>x</span>: 858</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-49ab8a62-b649-4ab4-9f34-9bfdebd3356c' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-49ab8a62-b649-4ab4-9f34-9bfdebd3356c' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-c631c161-f1b8-4f94-9928-2abc3a15b539' class='xr-section-summary-in' type='checkbox'  ><label for='section-c631c161-f1b8-4f94-9928-2abc3a15b539' class='xr-section-summary' >Data variables: <span>(17)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sensor_view_angle</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-30fc7e7b-7f54-472c-800f-cab5af3e6137' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-30fc7e7b-7f54-472c-800f-cab5af3e6137' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8507af3d-0f85-4e1d-9e55-34ab00e2e763' class='xr-var-data-in' type='checkbox'><label for='data-8507af3d-0f85-4e1d-9e55-34ab00e2e763' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sensor View Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>sensor_view_angle</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>standard_name :</span></dt><dd>sensor_view_angle</dd><dt><span>units :</span></dt><dd>degree</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>incidence_angle</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6c016aa8-378f-440f-83ef-878f8a3bf6ee' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6c016aa8-378f-440f-83ef-878f8a3bf6ee' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f0ebf992-6c19-4d91-b037-c3c1511bab60' class='xr-var-data-in' type='checkbox'><label for='data-f0ebf992-6c19-4d91-b037-c3c1511bab60' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Incidence Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>incidence_angle</dd><dt><span>short_name :</span></dt><dd>incidence_angle</dd><dt><span>SourceBand :</span></dt><dd>2</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>standard_name :</span></dt><dd>angle_of_incidence</dd><dt><span>units :</span></dt><dd>degrees</dd><dt><span>wkv :</span></dt><dd>angle_of_incidence</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sensor_azimuth</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-012d1d38-9ba3-4126-b686-26846d5f20e0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-012d1d38-9ba3-4126-b686-26846d5f20e0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-90a2c80a-628e-4906-ad14-a926a8494d0e' class='xr-var-data-in' type='checkbox'><label for='data-90a2c80a-628e-4906-ad14-a926a8494d0e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sensor Azimuth Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>sensor_azimuth</dd><dt><span>short_name :</span></dt><dd>sensor_azimuth</dd><dt><span>SourceBand :</span></dt><dd>3</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>standard_name :</span></dt><dd>sensor_azimuth_angle</dd><dt><span>units :</span></dt><dd>degrees</dd><dt><span>wkv :</span></dt><dd>sensor_azimuth_angle</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sigma0_VV</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6ce1c62e-c188-4d28-9900-00df061ad2c7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6ce1c62e-c188-4d28-9900-00df061ad2c7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-51748161-d68b-40cd-8e1a-123c1401399d' class='xr-var-data-in' type='checkbox'><label for='data-51748161-d68b-40cd-8e1a-123c1401399d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Normalized Radar Cross Section</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>0 0.1</dd><dt><span>name :</span></dt><dd>sigma0_VV</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>short_name :</span></dt><dd>sigma0</dd><dt><span>SourceBand :</span></dt><dd>4</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>standard_name :</span></dt><dd>surface_backwards_scattering_coefficient_of_radar_wave</dd><dt><span>suffix :</span></dt><dd>VV</dd><dt><span>units :</span></dt><dd>m/m</dd><dt><span>wkv :</span></dt><dd>surface_backwards_scattering_coefficient_of_radar_wave</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>topographic_height</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-0914a368-7611-4d75-9829-46fd790dea7d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0914a368-7611-4d75-9829-46fd790dea7d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e936401a-13c3-4fe6-a234-086e4221c0ec' class='xr-var-data-in' type='checkbox'><label for='data-e936401a-13c3-4fe6-a234-086e4221c0ec' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>GDAL Band Number 10</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.topo</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>name :</span></dt><dd>topographic_height</dd><dt><span>SourceBand :</span></dt><dd>5</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_land_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a04766df-2d92-4926-b002-bb2c8b490651' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a04766df-2d92-4926-b002-bb2c8b490651' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8df24834-b966-4a33-8c4c-0110f23c7e5b' class='xr-var-data-in' type='checkbox'><label for='data-8df24834-b966-4a33-8c4c-0110f23c7e5b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid land pixels (pixels near water boundaries have been masked)</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>name :</span></dt><dd>valid_land_doppler</dd><dt><span>SourceBand :</span></dt><dd>6</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_sea_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6d331670-785a-41af-a57a-510932fb8000' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6d331670-785a-41af-a57a-510932fb8000' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9671760d-61dc-47b2-b35e-9d0a9fd20845' class='xr-var-data-in' type='checkbox'><label for='data-9671760d-61dc-47b2-b35e-9d0a9fd20845' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid water covering pixels (near land boundaries have been masked)</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>name :</span></dt><dd>valid_sea_doppler</dd><dt><span>SourceBand :</span></dt><dd>7</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e73dee95-6f6c-403f-9d54-4975079282f8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e73dee95-6f6c-403f-9d54-4975079282f8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0762bebb-ab1c-4f94-93d8-b96a29d4a1dd' class='xr-var-data-in' type='checkbox'><label for='data-0762bebb-ab1c-4f94-93d8-b96a29d4a1dd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid pixels</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>name :</span></dt><dd>valid_doppler</dd><dt><span>SourceBand :</span></dt><dd>8</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fe</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-31146275-b06c-4c5c-a73d-a9ca8c35eff1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-31146275-b06c-4c5c-a73d-a9ca8c35eff1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c8bc9fc-8e8e-40e7-ad11-d6aff04ce4ca' class='xr-var-data-in' type='checkbox'><label for='data-6c8bc9fc-8e8e-40e7-ad11-d6aff04ce4ca' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler frequency shift due to electronic mispointing</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-200 200</dd><dt><span>name :</span></dt><dd>fe</dd><dt><span>SourceBand :</span></dt><dd>9</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fgeo</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1934a999-38a9-4b99-b66f-f767b1113ef6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1934a999-38a9-4b99-b66f-f767b1113ef6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ea0733fc-d534-4ad8-bae8-ecaf62ffc1d3' class='xr-var-data-in' type='checkbox'><label for='data-ea0733fc-d534-4ad8-bae8-ecaf62ffc1d3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler frequency shift due to orbit geometry</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-200 200</dd><dt><span>name :</span></dt><dd>fgeo</dd><dt><span>SourceBand :</span></dt><dd>10</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fdg</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6bda9c0e-f890-4285-9e8c-5213930a0e5d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6bda9c0e-f890-4285-9e8c-5213930a0e5d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5182daba-e2c6-49a2-abf0-bc8732178f11' class='xr-var-data-in' type='checkbox'><label for='data-5182daba-e2c6-49a2-abf0-bc8732178f11' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Radar Doppler frequency shift due to surface velocity</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-60 60</dd><dt><span>name :</span></dt><dd>fdg</dd><dt><span>offset_corrected :</span></dt><dd>True</dd><dt><span>SourceBand :</span></dt><dd>11</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>fww</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-82fba7f9-c34a-4913-a3de-512c1cce6b61' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-82fba7f9-c34a-4913-a3de-512c1cce6b61' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fa8e3542-5935-41a0-85dd-9261023c3cfe' class='xr-var-data-in' type='checkbox'><label for='data-fa8e3542-5935-41a0-85dd-9261023c3cfe' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Radar Doppler frequency shift due to wind waves</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.delta</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-60 60</dd><dt><span>name :</span></dt><dd>fww</dd><dt><span>SourceBand :</span></dt><dd>12</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>std_fww</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e9d5f459-edb4-4213-b4a2-a963aa4c949f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e9d5f459-edb4-4213-b4a2-a963aa4c949f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f70d814a-9f4b-46aa-bb69-185ae772e19c' class='xr-var-data-in' type='checkbox'><label for='data-f70d814a-9f4b-46aa-bb69-185ae772e19c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard deviation of radar Doppler frequency shift due to wind waves</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.thermal</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>0 10</dd><dt><span>name :</span></dt><dd>std_fww</dd><dt><span>SourceBand :</span></dt><dd>13</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_direction</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-30e8711e-b67d-429f-a6cb-ef3052c38c6d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-30e8711e-b67d-429f-a6cb-ef3052c38c6d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cf40a608-db16-4302-b419-c333c1e9e973' class='xr-var-data-in' type='checkbox'><label for='data-cf40a608-db16-4302-b419-c333c1e9e973' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>SAR look relative wind from direction used in CDOP calculation</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.phase</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/wind/2012-04.nc</dd><dt><span>minmax :</span></dt><dd>0 360</dd><dt><span>name :</span></dt><dd>wind_direction</dd><dt><span>SourceBand :</span></dt><dd>14</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/1QPVGG84TD.vrt</dd><dt><span>units :</span></dt><dd>degree</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_speed</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-28fc3f4e-7ec9-4d86-b461-2afdadb7e3e4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-28fc3f4e-7ec9-4d86-b461-2afdadb7e3e4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-baa3dc2e-614e-40a4-8228-ecba06fa6610' class='xr-var-data-in' type='checkbox'><label for='data-baa3dc2e-614e-40a4-8228-ecba06fa6610' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Wind speed used in CDOP calculation</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.speed</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/wind/2012-04.nc</dd><dt><span>minmax :</span></dt><dd>0 20</dd><dt><span>name :</span></dt><dd>wind_speed</dd><dt><span>short_name :</span></dt><dd>W</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/N7ARURQFKM.vrt</dd><dt><span>standard_name :</span></dt><dd>wind_speed</dd><dt><span>units :</span></dt><dd>m s-1</dd><dt><span>wkv :</span></dt><dd>wind_speed</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-97ae6d6d-1571-48bf-8240-d5b1a6890cbc' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-97ae6d6d-1571-48bf-8240-d5b1a6890cbc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e62d122c-dead-4f97-8c27-fc78d3691733' class='xr-var-data-in' type='checkbox'><label for='data-e62d122c-dead-4f97-8c27-fc78d3691733' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>colormap :</span></dt><dd>jet</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-180 180</dd><dt><span>name :</span></dt><dd>longitude</dd><dt><span>short_name :</span></dt><dd>longitude</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/YHR9KS1QW5.vrt</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>wkv :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4d26dd1b-34cd-496a-be1c-8d1f78905d0d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4d26dd1b-34cd-496a-be1c-8d1f78905d0d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a170436c-696e-4e8b-81ae-d909cd7f6aa1' class='xr-var-data-in' type='checkbox'><label for='data-a170436c-696e-4e8b-81ae-d909cd7f6aa1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>colormap :</span></dt><dd>jet</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-90 90</dd><dt><span>name :</span></dt><dd>latitude</dd><dt><span>short_name :</span></dt><dd>latitude</dd><dt><span>SourceBand :</span></dt><dd>1</dd><dt><span>SourceFilename :</span></dt><dd>/vsimem/J21W7N5NAA.vrt</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>wkv :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[522522 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-0291d5c7-8750-432a-93de-4425ee39daea' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-0291d5c7-8750-432a-93de-4425ee39daea' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-c0a8b31e-9460-486e-a915-17b2e6bd98dd' class='xr-section-summary-in' type='checkbox'  ><label for='section-c0a8b31e-9460-486e-a915-17b2e6bd98dd' class='xr-section-summary' >Attributes: <span>(74)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GDAL :</span></dt><dd>GDAL 3.2.1, released 2020/12/29</dd><dt><span>acknowledgement :</span></dt><dd>GSAR IDL pre-processing software was developed by NORCE. The project was supported by the Norwegian Space Agency and the ESA Network of Resources Initiative.</dd><dt><span>azimuth_start_time :</span></dt><dd>2012-04-08T11:04:44.164923</dd><dt><span>contributor_email :</span></dt><dd>jeong-won.park@kopri.re.kr, hjoh@norceresearch.no, geen@norceresearch.no</dd><dt><span>contributor_institution :</span></dt><dd>Korea Polar Research Institute (KOPRI), NORCE, NORCE</dd><dt><span>contributor_name :</span></dt><dd>Jeong-Won Park, Harald Johnsen, Geir Engen</dd><dt><span>contributor_role :</span></dt><dd>Investigator, Investigator, Investigator</dd><dt><span>Conventions :</span></dt><dd>CF-1.8, ACDD-1.3</dd><dt><span>creator_email :</span></dt><dd>mortenwh@met.no</dd><dt><span>creator_institution :</span></dt><dd>Norwegian Meteorological Institute (MET Norway)</dd><dt><span>creator_name :</span></dt><dd>Morten Wergeland Hansen</dd><dt><span>creator_role :</span></dt><dd>Investigator</dd><dt><span>creator_type :</span></dt><dd>person</dd><dt><span>dataset_production_status :</span></dt><dd>Complete</dd><dt><span>date_created :</span></dt><dd>2024-07-01T16:08:51.437535+00:00</dd><dt><span>date_created_type :</span></dt><dd>Created</dd><dt><span>doi :</span></dt><dd>https://doi.org/10.57780/esa-56fb232</dd><dt><span>doppler :</span></dt><dd>a1458cc32be6b03fc98fc572b57712bed148e2b6</dd><dt><span>doppler_resource :</span></dt><dd>https://github.com/mortenwh/doppler</dd><dt><span>geospatial_bounds :</span></dt><dd>POLYGON ((42.17 -9.14, 42.30 -9.93, 42.40 -10.57, 42.48 -11.09, 42.55 -11.58, 42.61 -12.04, 42.68 -12.49, 42.72 -12.85, 42.77 -13.20, 42.82 -13.57, 42.87 -13.99, 42.87 -13.99, 42.51 -14.07, 42.15 -14.16, 41.79 -14.24, 41.43 -14.32, 41.07 -14.40, 40.71 -14.48, 40.35 -14.56, 39.98 -14.64, 39.62 -14.72, 39.21 -14.81, 39.21 -14.81, 39.16 -14.42, 39.11 -14.06, 39.07 -13.73, 39.02 -13.39, 38.96 -12.97, 38.89 -12.53, 38.82 -12.07, 38.74 -11.58, 38.64 -10.97, 38.52 -10.24, 38.52 -10.24, 38.93 -10.12, 39.29 -10.01, 39.65 -9.91, 40.01 -9.80, 40.37 -9.69, 40.73 -9.59, 41.09 -9.48, 41.45 -9.37, 41.81 -9.26, 42.17 -9.14))</dd><dt><span>geospatial_bounds_crs :</span></dt><dd>EPSG:4326</dd><dt><span>geospatial_lat_max :</span></dt><dd>42.417316</dd><dt><span>geospatial_lat_min :</span></dt><dd>38.51323</dd><dt><span>geospatial_lon_max :</span></dt><dd>-9.1438875</dd><dt><span>geospatial_lon_min :</span></dt><dd>-11.7132845</dd><dt><span>history :</span></dt><dd>2024-07-01T16:08:51.389598+00:00: sar_doppler.utils.create_merged_swaths(ds, EPSG=4326)
+2024-07-01T16:08:51.437482+00:00: sar_doppler.models.Dataset.objects.export2netcdf(n, ds, filename=&#x27;/lustre/storeB/project/fou/fd/project/sar-doppler/products/sar_doppler/merged/2012/04/08/ASA_WSDV2PRNMI20120408_110444_000618683113_00267_52867_0000.nc&#x27;)</dd><dt><span>id :</span></dt><dd>564d73b5-a144-45ec-997e-2aa35ad84edc</dd><dt><span>institution :</span></dt><dd>Norwegian Meteorological Institute (MET Norway)</dd><dt><span>instrument :</span></dt><dd>Advanced Synthetic Aperture Radar (ASAR)</dd><dt><span>instrument_vocabulary :</span></dt><dd>https://space.oscar.wmo.int/instruments/view/asar</dd><dt><span>iso_topic_category :</span></dt><dd>oceans</dd><dt><span>keywords :</span></dt><dd>GCMDSK:RADAR BACKSCATTER,GCMDSK:RADAR IMAGERY,GCMDSK:RADIAL VELOCITY,GEMET:Oceanographic geographical features, NORTHEMES:Weather and climate</dd><dt><span>keywords_vocabulary :</span></dt><dd>GCMDSK:NASA/GCMD Earth Science Keywords:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords, GEMET:GEMET - INSPIRE themes:https://www.eionet.europa.eu/gemet/en/inspire-themes/, NORTHEMES:GeoNorge Themes:https://register.geonorge.no/metadata-kodelister/nasjonal-temainndeling</dd><dt><span>license :</span></dt><dd>https://earth.esa.int/eogateway/documents/20142/1564626/ESA-Data-Policy-ESA-PB-EO-2010-54.pdf (ESA earth observation data policy)</dd><dt><span>naming_authority :</span></dt><dd>no.met</dd><dt><span>nansat :</span></dt><dd>7c5af871a5eae24d741d1253288392bfbe70fe4a</dd><dt><span>NANSAT_GeoTransform :</span></dt><dd>(0.0| 1.0| 0.0| 0.0| 0.0| 1.0)</dd><dt><span>NANSAT_Projection :</span></dt><dd>GEOGCS[&amp;WGS 84&amp;|DATUM[&amp;WGS_1984&amp;|SPHEROID[&amp;WGS 84&amp;|6378137|298.257223563|AUTHORITY[&amp;EPSG&amp;|&amp;7030&amp;]]|AUTHORITY[&amp;EPSG&amp;|&amp;6326&amp;]]|PRIMEM[&amp;Greenwich&amp;|0|AUTHORITY[&amp;EPSG&amp;|&amp;8901&amp;]]|UNIT[&amp;degree&amp;|0.0174532925199433|AUTHORITY[&amp;EPSG&amp;|&amp;9122&amp;]]|AXIS[&amp;Latitude&amp;|NORTH]|AXIS[&amp;Longitude&amp;|EAST]|AUTHORITY[&amp;EPSG&amp;|&amp;4326&amp;]]</dd><dt><span>nansat_resource :</span></dt><dd>https://github.com/mortenwh/nansat</dd><dt><span>originating_file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/2012/04/08/RVL_ASA_WS_20120408110444165.gsar</dd><dt><span>platform :</span></dt><dd>Environmental Satellite (Envisat)</dd><dt><span>platform_vocabulary :</span></dt><dd>https://space.oscar.wmo.int/satelliteprogrammes/view/envisat</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>processing_level :</span></dt><dd>Scientific</dd><dt><span>project :</span></dt><dd>Norwegian Space Agency project JOP.06.20.2: Reprocessing and analysis of historical data for future operationalization of Doppler shifts from SAR, NMI/ESA-NoR Envisat ASAR Doppler centroid shift processing ID220131, Improved knowledge of high latitude ocean circulation with Synthetic Aperture Radar (ESA Prodex ISAR), Drift estimation of sea ice in the Arctic Ocean and sub-Arctic Seas (ESA Prodex DESIce)</dd><dt><span>publisher_email :</span></dt><dd>data-management-group@met.no</dd><dt><span>publisher_name :</span></dt><dd>Norwegian Meteorological Institute</dd><dt><span>publisher_type :</span></dt><dd>institution</dd><dt><span>publisher_url :</span></dt><dd>https://www.met.no/</dd><dt><span>radarfreq :</span></dt><dd>5331004416.0</dd><dt><span>sar_doppler :</span></dt><dd>3d12f9543924800e37fb9f1162bc9b2669576116</dd><dt><span>sar_doppler_resource :</span></dt><dd>https://github.com/mortenwh/django-geo-spaas-sar-doppler</dd><dt><span>source :</span></dt><dd>Space Borne Instrument</dd><dt><span>spatial_representation :</span></dt><dd>grid</dd><dt><span>summary :</span></dt><dd>Calibrated geophysical range Doppler frequency shift retrievals from an ENVISAT ASAR wide-swath acqusition obtained on 2012-04-08T11:04:44.130863+00:00. The geophysical Doppler shift depends on the ocean wave-state and the sea surface current. In the absence of current, the geophysical Doppler shift is mostly related to the local wind speed and direction. The present dataset is in VV polarization.</dd><dt><span>summary_lang :</span></dt><dd>en</dd><dt><span>time_coverage_end :</span></dt><dd>2012-04-08T11:05:47.221222+00:00</dd><dt><span>time_coverage_start :</span></dt><dd>2012-04-08T11:04:42.997809+00:00</dd><dt><span>title :</span></dt><dd>Calibrated geophysical ENVISAT ASAR wide-swath range Doppler frequency shift retrievals in VV polarisation, 2012-04-08T11:04:44.130863+00:00</dd><dt><span>title_lang :</span></dt><dd>en</dd><dt><span>xoffset_slc :</span></dt><dd>96</dd><dt><span>xsamplefreq :</span></dt><dd>600240.0</dd><dt><span>xsamplefreq_slc :</span></dt><dd>19207680.0</dd><dt><span>xsize :</span></dt><dd>192</dd><dt><span>xtime :</span></dt><dd>0.005341754186624</dd><dt><span>xtime_slc :</span></dt><dd>0.005329363309642</dd><dt><span>yoffset_slc :</span></dt><dd>0</dd><dt><span>ysamplefreq :</span></dt><dd>10.189966895849247</dd><dt><span>ysamplefreq_slc :</span></dt><dd>1711.9144385026736</dd><dt><span>ysize :</span></dt><dd>632</dd><dt><span>ytime :</span></dt><dd>2012-04-08T11:04:44.164923Z</dd><dt><span>ytime_slc :</span></dt><dd>2012-04-08T11:04:42.997809</dd><dt><span>summary_no :</span></dt><dd>Kalibrert geofysisk Dopplerskift fra ENVISAT ASAR målt 2012-04-08T11:04:44.130863+00:00. Det geofysiske Dopplerskiftet avhenger av havbølgetilstand og overflatestrøm. Ved fravær av strøm er det geofysiske Dopplerskiftet stort sett relatert til den lokale vindhastigheten og dens retning. Foreliggende datasett er i VV polarisering.</dd><dt><span>title_no :</span></dt><dd>Kalibrert geofysisk ENVISAT ASAR Dopplerskift i full bildebredde og VV polarisering, 2012-04-08T11:04:44.130863+00:00</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">sigma0_VV</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fdb628203d0&gt;
+</pre></div>
+</div>
+<img alt="../_images/8aefa81f53257cec41b8b41b85e9b0a80c49a474ce03f126840894e629628937.png" src="../_images/8aefa81f53257cec41b8b41b85e9b0a80c49a474ce03f126840894e629628937.png" />
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="parameter-description">
+<h1>Parameter description<a class="headerlink" href="#parameter-description" title="Link to this heading">#</a></h1>
+<section id="sensor-view-angle">
+<h2>sensor_view_angle<a class="headerlink" href="#sensor-view-angle" title="Link to this heading">#</a></h2>
+<p>The angle between a sensor’s line of sight and the vertical downward direction. A zero angle indicates the sensor is looking directly downward.</p>
+</section>
+<section id="incidence-angle">
+<h2>incidence_angle<a class="headerlink" href="#incidence-angle" title="Link to this heading">#</a></h2>
+<p>The angle that a ray coming from a light source makes with a line perpendicular to the surface at the point of incidence.</p>
+</section>
+<section id="sensor-azimuth">
+<h2>sensor_azimuth<a class="headerlink" href="#sensor-azimuth" title="Link to this heading">#</a></h2>
+<p>The horizontal angle measured clockwise from north to the direction the sensor is pointing.</p>
+</section>
+<section id="sigmao-vv">
+<h2>sigmaO_VV<a class="headerlink" href="#sigmao-vv" title="Link to this heading">#</a></h2>
+<p>The scattering/absorption/attenuation coefficient is assumed to cover all wavelengths, unless specified by the the radiation_wavelength coordinate. It pertains to the radiation’s deflection without energy loss. Backwards scattering involves scattering into all backward angles, i.e. those exceeding pi/2 radians. This quantity should not specify a scattering_angle.</p>
+<p>The radar cross section is a measure of the detectability of an object. It’s the ratio of the power scattered by the object in a specific direction to the power that would be scattered by an ideal reflector.</p>
+</section>
+<section id="topographic-height">
+<h2>topographic_height<a class="headerlink" href="#topographic-height" title="Link to this heading">#</a></h2>
+<p>The vertical distance or height of a point above sea level.</p>
+</section>
+<section id="valid-land-doppler">
+<h2>valid_land_doppler<a class="headerlink" href="#valid-land-doppler" title="Link to this heading">#</a></h2>
+<p>Valid land pixels (pixels near water boundaries have been masked)</p>
+</section>
+<section id="valid-sea-doppler">
+<h2>valid_sea_doppler<a class="headerlink" href="#valid-sea-doppler" title="Link to this heading">#</a></h2>
+<p>Valid water covering pixels (near land boundaries have been masked)</p>
+</section>
+<section id="valid-doppler">
+<h2>valid_doppler<a class="headerlink" href="#valid-doppler" title="Link to this heading">#</a></h2>
+<p>Valid Doppler pixels (over land, ocean or ice).</p>
+</section>
+<section id="fe">
+<h2>fe<a class="headerlink" href="#fe" title="Link to this heading">#</a></h2>
+<p>Doppler frequency shift due to electronic mispointing.</p>
+</section>
+<section id="fgeo">
+<h2>fgeo<a class="headerlink" href="#fgeo" title="Link to this heading">#</a></h2>
+<p>Doppler frequency shift due to orbit geometry.</p>
+</section>
+<section id="fdg">
+<h2>fdg<a class="headerlink" href="#fdg" title="Link to this heading">#</a></h2>
+<p>Radar Doppler frequency shift due to surface velocity.</p>
+</section>
+<section id="fww">
+<h2>fww<a class="headerlink" href="#fww" title="Link to this heading">#</a></h2>
+<p>Radar Doppler frequency shift due to wind waves.</p>
+</section>
+<section id="std-fww">
+<h2>std_fww<a class="headerlink" href="#std-fww" title="Link to this heading">#</a></h2>
+<p>Standard deviation of radar Doppler frequency shift due to wind waves.</p>
+</section>
+<section id="wind-direction">
+<h2>wind_direction<a class="headerlink" href="#wind-direction" title="Link to this heading">#</a></h2>
+<p>SAR look relative wind from direction used in CDOP calculation.</p>
+</section>
+<section id="wind-speed">
+<h2>wind_speed<a class="headerlink" href="#wind-speed" title="Link to this heading">#</a></h2>
+<p>Wind speed used in CDOP calculation.</p>
+</section>
+<section id="longitude">
+<h2>longitude<a class="headerlink" href="#longitude" title="Link to this heading">#</a></h2>
+<p>Longitude degrees east.</p>
+</section>
+<section id="latitude">
+<h2>latitude<a class="headerlink" href="#latitude" title="Link to this heading">#</a></h2>
+<p>Latitude degrees north.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="SAR_Dataset_Accessibility.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SAR Dataset Accessibility</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-view-angle">sensor_view_angle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incidence-angle">incidence_angle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-azimuth">sensor_azimuth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sigmao-vv">sigmaO_VV</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topographic-height">topographic_height</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-land-doppler">valid_land_doppler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-sea-doppler">valid_sea_doppler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-doppler">valid_doppler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fe">fe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fgeo">fgeo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fdg">fdg</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fww">fww</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#std-fww">std_fww</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-direction">wind_direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-speed">wind_speed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#longitude">longitude</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latitude">latitude</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By SAR Doppler User Guide
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
