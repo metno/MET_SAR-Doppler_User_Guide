@@ -41,7 +41,7 @@ File [0;32m~/.venv/lib/python3.10/site-packages/xarray/backends/lru_cache.py:56
 [0;32m---> 56[0m     value [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_cache[49m[43m[[49m[43mkey[49m[43m][49m
 [1;32m     57[0m     [38;5;28mself[39m[38;5;241m.[39m_cache[38;5;241m.[39mmove_to_end(key)
 
-[0;31mKeyError[0m: [<class 'netCDF4._netCDF4.Dataset'>, ('https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000614583111_00101_51839_0000.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '128a3bf7-ef97-4dd0-8a95-6aa2d70f89cc']
+[0;31mKeyError[0m: [<class 'netCDF4._netCDF4.Dataset'>, ('https://thredds.met.no/thredds/dodsC/remotesensingenvisat/asar-doppler/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000614583111_00101_51839_0000.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), 'e8fef75f-48bf-4338-bfdd-7c5d8d10f532']
 
 During handling of the above exception, another exception occurred:
 
