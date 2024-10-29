@@ -30,12 +30,16 @@
           </ogc:Intersects>
           <ogc:PropertyIsGreaterThanOrEqualTo>
             <ogc:PropertyName>apiso:TempExtent_begin</ogc:PropertyName>
-            <ogc:Literal>2018-01-01 00:00</ogc:Literal>
+            <ogc:Literal>2012-02-01 00:00</ogc:Literal>
           </ogc:PropertyIsGreaterThanOrEqualTo>
           <ogc:PropertyIsLessThanOrEqualTo>
             <ogc:PropertyName>apiso:TempExtent_end</ogc:PropertyName>
-            <ogc:Literal>2022-01-01 00:00</ogc:Literal>
+            <ogc:Literal>2012-02-03 00:00</ogc:Literal>
           </ogc:PropertyIsLessThanOrEqualTo>
+          <ogc:PropertyIsLike wildCard="%" singleChar="_" escapeChar="\\">
+            <ogc:PropertyName>dc:title</ogc:PropertyName>
+            <ogc:Literal>%ENVISAT ASAR%</ogc:Literal>
+          </ogc:PropertyIsLike>
         </ogc:And>
       </ogc:Filter>
     </csw:Constraint>
