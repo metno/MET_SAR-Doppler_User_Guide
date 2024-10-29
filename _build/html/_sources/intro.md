@@ -1,6 +1,6 @@
 # SAR Doppler User Guide
 
-This jupyter-book is to serve as a user manual on how to access, open, read and visualize SAR data which provide the Doppler shift in radar signals from the ocean surface.
+This jupyter-book is to serve as a user manual on how to access, open, interact, visualize and plot SAR data. This refers to the calibrated geophysical range Doppler frequency shift retrievals from the ENVISAT ASAR wide-swath acqusitions obtained between 2002 and 2012.
 
 ### Table of Contents
 

@@ -11,7 +11,7 @@ title: SAR Doppler User Guide Document
 #- file: markdown-notebooks
 
 chapters:
-- file: notebooks/Plot_Data_on_a_Map.ipynb
 - file: notebooks/SAR_Dataset_Accessibility.ipynb
 - file: notebooks/Parameter_Descriptions.ipynb
+- file: notebooks/Plot_Data_on_a_Map.ipynb
 
