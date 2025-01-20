@@ -4,7 +4,7 @@ This jupyter-book is to serve as a user manual on how to access, open, interact,
 
 ### Table of Contents
 
-Below is a table of contents for describing how to find, access and use the SAR Doppler data.
+Below is a table of contents. Here you find topics on how to find, access and use the SAR Doppler data.
 
 ```{tableofcontents}
 ```
