@@ -1,0 +1,5 @@
+/* _static/custom.css */
+.output_area .output_subarea {
+    max-height: 300px;  /* Set the maximum height for the output area */
+    overflow-y: auto;   /* Add a scrollbar if the output exceeds the maximum height */
+}

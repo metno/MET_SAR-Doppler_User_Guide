@@ -9,7 +9,8 @@ logo: logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
-  timeout: 300  # This will set the timeout limit to 600 seconds (5 minutes)
+  # timeout: 300  # This will set the timeout limit to 600 seconds (5 minutes)
+  timeout: -1  # Disable execution timeout
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -37,3 +38,5 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+
