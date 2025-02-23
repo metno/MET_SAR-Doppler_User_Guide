@@ -1,0 +1,12 @@
+/* @media print {
+    .bd-toc {
+        visibility: hidden;
+    }
+} */
+
+
+/* @media print { */
+.contents {
+    display: none;
+}
+/* } */
