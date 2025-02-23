@@ -2,16 +2,60 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
+# root: notebooks/index
 root: intro
 title: SAR Doppler User Guide Document
+options:
+  numbered: true
+  maxdepth: 3  # The displayed Table of Contents will only have 3 levels
+  
+defaults:  # The defaults key will be applied to all chapters and sub-sections
+  titlesonly: False  # Need to specify this to get complete table of contents
+
+chapters:
+# - file: intro#sar-doppler-user-guide   # Including the anchor to be able to refer to the file here as well
+- file: notebooks/Find_and_Access_Data
+- file: notebooks/Use_and_Visualise_Data
+- file: notebooks/Parameter_Descriptions
+  
 
 #chapters:
 #- file: markdown
 #- file: notebooks
 #- file: markdown-notebooks
 
-chapters:
-- file: notebooks/SAR_Dataset_Accessibility.ipynb
-- file: notebooks/Parameter_Descriptions.ipynb
-- file: notebooks/Plot_Data_on_a_Map.ipynb
-
+# chapters:
+# - file: notebooks/Find_and_Access_Data.ipynb#find-and-access-data
+#   sections:
+#     - file: notebooks/Find_and_Access_Data.ipynb##find-data-through-data-met-no
+#     - file: notebooks/Find_and_Access_Data.ipynb##visualise-data-through-data-met-no
+#     - file: notebooks/Find_and_Access_Data.ipynb##access-datasets-through-data-met-no
+#     - file: notebooks/Find_and_Access_Data.ipynb##access-datasets-through-thredds-met-no
+#     - file: notebooks/Find_and_Access_Data.ipynb##how-to-open-datasets
+#       sections:
+#         - file: notebooks/Find_and_Access_Data.ipynb###opendap-using-xarray
+#         - file: notebooks/Find_and_Access_Data.ipynb###httpserver-download-using-xarray
+#     - file: notebooks/Find_and_Access_Data.ipynb##find-data-through-csw-catalog-service-on-the-web
+#       sections:
+#         - file: notebooks/Find_and_Access_Data.ipynb###get-parent-datasets-and-their-children-or-dataset-series-in-iso-19115-with-ogc-csw
+#         - file: notebooks/Find_and_Access_Data.ipynb###find-data-with-opensearch
+#         - file: notebooks/Find_and_Access_Data.ipynb###more-advanced-geographical-search-with-ogc-csw
+#         - file: notebooks/Find_and_Access_Data.ipynb###query-csw-endpoint-by-the-use-of-python
+#         - file: notebooks/Find_and_Access_Data.ipynb###extract-the-opendap-urls
+#         - file: notebooks/Find_and_Access_Data.ipynb###query-csw-endpoint-by-the-use-of-an-http-post-from-the-terminal
+# - file: notebooks/Use_and_Visualise_Data.ipynb#use-and-visualise-data
+#   sections:
+#     - file: notebooks/Use_and_Visualise_Data.ipynb##visualise-data-variables-with-wms-in-qgis
+#     - file: notebooks/Use_and_Visualise_Data.ipynb##plotting-data-variables-with-python
+#       sections:
+#         - file: notebooks/Use_and_Visualise_Data.ipynb###cartesian-plotting-function
+#         - file: notebooks/Use_and_Visualise_Data.ipynb###cartesian-plotting-examples
+#         - file: notebooks/Use_and_Visualise_Data.ipynb###plotting-function-with-polar-projection
+#         - file: notebooks/Use_and_Visualise_Data.ipynb###polar-projection-plotting-examples
+# - file: notebooks/Parameter_Descriptions.ipynb#parameter-descriptions
+#   sections:
+#     - file: notebooks/Parameter_Descriptions.ipynb##list-of-variables
+#     - file: notebooks/Parameter_Descriptions.ipynb##example-overview-of-variables
+#       sections:
+#         - file: notebooks/Parameter_Descriptions.ipynb###printed-overview-of-variables
+#         - file: notebooks/Parameter_Descriptions.ipynb###interactive-overview-of-dataset
