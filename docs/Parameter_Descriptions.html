@@ -1,0 +1,1234 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. Parameter Descriptions &#8212; SAR Doppler User Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d53c79f1" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Parameter_Descriptions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="2. Use and Visualise Data" href="Use_and_Visualise_Data.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">SAR Doppler User Guide</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    SAR Doppler User Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Find_and_Access_Data.html">1. Find and Access Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Use_and_Visualise_Data.html">2. Use and Visualise Data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Parameter Descriptions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Parameter_Descriptions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/Parameter_Descriptions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Parameter Descriptions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-variables">3.1. List of Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-view-angle">3.1.1. sensor_view_angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma0">3.1.2. sigma0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subswath-number">3.1.3. subswath_number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incidence-angle">3.1.4. incidence_angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-azimuth">3.1.5. sensor_azimuth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dc">3.1.6. dc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-std">3.1.7. dc_std</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topographic-height">3.1.8. topographic_height</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-land-doppler">3.1.9. valid_land_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-sea-doppler">3.1.10. valid_sea_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-doppler">3.1.11. valid_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-mispointing">3.1.12. electronic_mispointing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-doppler">3.1.13. geometric_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-waves-doppler">3.1.14. wind_waves_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#std-wind-waves-doppler">3.1.15. std_wind_waves_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-direction">3.1.16. wind_direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-speed">3.1.17. wind_speed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geophysical-doppler">3.1.18. geophysical_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-range-current">3.1.19. ground_range_current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#std-ground-range-current">3.1.20. std_ground_range_current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#longitude">3.1.21. longitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latitude">3.1.22. latitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-doppler-time">3.1.23. zero_doppler_time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-overview-of-variables">3.2. Example Overview of Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#printed-overview-of-variables">3.2.1. Printed Overview of Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-overview-of-dataset">3.2.2. Interactive Overview of Dataset</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="parameter-descriptions">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink"><span class="section-number">3. </span>Parameter Descriptions</a><a class="headerlink" href="#parameter-descriptions" title="Link to this heading">#</a></h1>
+<br />
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#parameter-descriptions" id="id1">Parameter Descriptions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#list-of-variables" id="id2">List of Variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sensor-view-angle" id="id3">sensor_view_angle</a></p></li>
+<li><p><a class="reference internal" href="#sigma0" id="id4">sigma0</a></p></li>
+<li><p><a class="reference internal" href="#subswath-number" id="id5">subswath_number</a></p></li>
+<li><p><a class="reference internal" href="#incidence-angle" id="id6">incidence_angle</a></p></li>
+<li><p><a class="reference internal" href="#sensor-azimuth" id="id7">sensor_azimuth</a></p></li>
+<li><p><a class="reference internal" href="#dc" id="id8">dc</a></p></li>
+<li><p><a class="reference internal" href="#dc-std" id="id9">dc_std</a></p></li>
+<li><p><a class="reference internal" href="#topographic-height" id="id10">topographic_height</a></p></li>
+<li><p><a class="reference internal" href="#valid-land-doppler" id="id11">valid_land_doppler</a></p></li>
+<li><p><a class="reference internal" href="#valid-sea-doppler" id="id12">valid_sea_doppler</a></p></li>
+<li><p><a class="reference internal" href="#valid-doppler" id="id13">valid_doppler</a></p></li>
+<li><p><a class="reference internal" href="#electronic-mispointing" id="id14">electronic_mispointing</a></p></li>
+<li><p><a class="reference internal" href="#geometric-doppler" id="id15">geometric_doppler</a></p></li>
+<li><p><a class="reference internal" href="#wind-waves-doppler" id="id16">wind_waves_doppler</a></p></li>
+<li><p><a class="reference internal" href="#std-wind-waves-doppler" id="id17">std_wind_waves_doppler</a></p></li>
+<li><p><a class="reference internal" href="#wind-direction" id="id18">wind_direction</a></p></li>
+<li><p><a class="reference internal" href="#wind-speed" id="id19">wind_speed</a></p></li>
+<li><p><a class="reference internal" href="#geophysical-doppler" id="id20">geophysical_doppler</a></p></li>
+<li><p><a class="reference internal" href="#ground-range-current" id="id21">ground_range_current</a></p></li>
+<li><p><a class="reference internal" href="#std-ground-range-current" id="id22">std_ground_range_current</a></p></li>
+<li><p><a class="reference internal" href="#longitude" id="id23">longitude</a></p></li>
+<li><p><a class="reference internal" href="#latitude" id="id24">latitude</a></p></li>
+<li><p><a class="reference internal" href="#zero-doppler-time" id="id25">zero_doppler_time</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#example-overview-of-variables" id="id26">Example Overview of Variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#printed-overview-of-variables" id="id27">Printed Overview of Variables</a></p></li>
+<li><p><a class="reference internal" href="#interactive-overview-of-dataset" id="id28">Interactive Overview of Dataset</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<br /><p>Below is a list with descriptions of the variables available in the SAR datasets.</p>
+<br />
+<br /><p>The code snippet below is included to set up and activate a virtual environment for which the necessary packages are downloaded. These are listed in the “requirements.txt” folder.</p>
+<p>The purpose of this code-snippet is to make the manual more user friendly. This should ensure that each user can run these notebooks without further ado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
+<span class="err">!</span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">.</span><span class="n">venv</span>      <span class="c1"># sets up a virtual environment</span>
+<span class="err">!</span><span class="n">source</span> <span class="o">.</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>  <span class="c1"># Activates said environment</span>
+
+<span class="c1"># Installing the required packages to current environment</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="o">../</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">The &quot;%%capture&quot; command ensures that the outputs </span>
+<span class="sd">(in this case directories) are not displayed.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br />
+<br /><section id="list-of-variables">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink"><span class="section-number">3.1. </span>List of Variables</a><a class="headerlink" href="#list-of-variables" title="Link to this heading">#</a></h2>
+<section id="sensor-view-angle">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">3.1.1. </span>sensor_view_angle</a><a class="headerlink" href="#sensor-view-angle" title="Link to this heading">#</a></h3>
+<p>The angle between a sensor’s line of sight and the vertical downward direction. A zero angle indicates the sensor is looking directly downward.</p>
+<br />
+</section>
+<section id="sigma0">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">3.1.2. </span>sigma0</a><a class="headerlink" href="#sigma0" title="Link to this heading">#</a></h3>
+<p>The normalized radar cross section.</p>
+<br />
+<p>The radar cross section is a measure of the detectability of an object. It’s the ratio of the power scattered by the object in a specific direction to the power that would be scattered by an ideal reflector.</p>
+<br />
+</section>
+<section id="subswath-number">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">3.1.3. </span>subswath_number</a><a class="headerlink" href="#subswath-number" title="Link to this heading">#</a></h3>
+<p>Per pixel subswath number.</p>
+<br />
+<p>Each image is composed of 5 subswaths. The variable provides the subswath number of each image pixel.</p>
+<br />
+</section>
+<section id="incidence-angle">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">3.1.4. </span>incidence_angle</a><a class="headerlink" href="#incidence-angle" title="Link to this heading">#</a></h3>
+<p>The angle between the radar beam center and the normal to the local topography is the incidence angle.</p>
+<br />
+</section>
+<section id="sensor-azimuth">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">3.1.5. </span>sensor_azimuth</a><a class="headerlink" href="#sensor-azimuth" title="Link to this heading">#</a></h3>
+<p>The horizontal angle measured clockwise from north to the direction the sensor is pointing.</p>
+<br />
+</section>
+<section id="dc">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">3.1.6. </span>dc</a><a class="headerlink" href="#dc" title="Link to this heading">#</a></h3>
+<p>The Doppler Centroid frequency shift.</p>
+<br />
+</section>
+<section id="dc-std">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">3.1.7. </span>dc_std</a><a class="headerlink" href="#dc-std" title="Link to this heading">#</a></h3>
+<p>The standard deviation of Doppler Centroid frequency shift.</p>
+<br />
+</section>
+<section id="topographic-height">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">3.1.8. </span>topographic_height</a><a class="headerlink" href="#topographic-height" title="Link to this heading">#</a></h3>
+<p>The vertical distance or height of a point above sea level.</p>
+<br />
+</section>
+<section id="valid-land-doppler">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">3.1.9. </span>valid_land_doppler</a><a class="headerlink" href="#valid-land-doppler" title="Link to this heading">#</a></h3>
+<p>Valid land pixels (pixels near water boundaries have been masked).</p>
+<br />
+</section>
+<section id="valid-sea-doppler">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">3.1.10. </span>valid_sea_doppler</a><a class="headerlink" href="#valid-sea-doppler" title="Link to this heading">#</a></h3>
+<p>Valid water covering pixels (near land boundaries have been masked).</p>
+<br />
+</section>
+<section id="valid-doppler">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">3.1.11. </span>valid_doppler</a><a class="headerlink" href="#valid-doppler" title="Link to this heading">#</a></h3>
+<p>Valid Doppler pixels (0 for invalid, 1 for land, 2 for ocean).</p>
+<br />
+</section>
+<section id="electronic-mispointing">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">3.1.12. </span>electronic_mispointing</a><a class="headerlink" href="#electronic-mispointing" title="Link to this heading">#</a></h3>
+<p>The Doppler frequency shift due to electronic mispointing.</p>
+<br />
+</section>
+<section id="geometric-doppler">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">3.1.13. </span>geometric_doppler</a><a class="headerlink" href="#geometric-doppler" title="Link to this heading">#</a></h3>
+<p>The Doppler frequency shift due to orbit geometry.</p>
+<br />
+</section>
+<section id="wind-waves-doppler">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">3.1.14. </span>wind_waves_doppler</a><a class="headerlink" href="#wind-waves-doppler" title="Link to this heading">#</a></h3>
+<p>The Radar Doppler frequency shift due to wind waves.</p>
+<br />
+<p>This is an experimental variable calculated from ERA5 wind fields and an empirical model (CDOP). Because the wind field is uncertain, the variable is often inaccurate.</p>
+<br />
+</section>
+<section id="std-wind-waves-doppler">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">3.1.15. </span>std_wind_waves_doppler</a><a class="headerlink" href="#std-wind-waves-doppler" title="Link to this heading">#</a></h3>
+<p>The standard deviation of radar Doppler frequency shift due to wind waves.</p>
+<br />
+</section>
+<section id="wind-direction">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">3.1.16. </span>wind_direction</a><a class="headerlink" href="#wind-direction" title="Link to this heading">#</a></h3>
+<p>SAR look relative ERA5 reanalysis wind-from direction used in CDOP calculation.</p>
+<br />
+</section>
+<section id="wind-speed">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">3.1.17. </span>wind_speed</a><a class="headerlink" href="#wind-speed" title="Link to this heading">#</a></h3>
+<p>ERA5 reanalysis wind speed used in CDOP calculation.</p>
+<br />
+</section>
+<section id="geophysical-doppler">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">3.1.18. </span>geophysical_doppler</a><a class="headerlink" href="#geophysical-doppler" title="Link to this heading">#</a></h3>
+<p>The radar Doppler frequency shift due to surface velocity.</p>
+<br />
+</section>
+<section id="ground-range-current">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">3.1.19. </span>ground_range_current</a><a class="headerlink" href="#ground-range-current" title="Link to this heading">#</a></h3>
+<p>The sea surface current velocity in ground range direction.</p>
+<br />
+<p>By subtracting wind_waves_doppler from geophysical_doppler (geophysical_doppler - wind_waves_doppler) you are left with the Doppler shift caused by the sea surface current. This is then transformed to a measure of the current in the ground range direction, i.e. “ground_range_current”.</p>
+<br />
+<p>The wind_waves_doppler is an experimental variable calculated from ERA5 wind fields and an empirical model (CDOP). The ERA5 wind field is projected onto the SAR footprint be nearest-neighbour interpolation. Because the wind field is uncertain, the wind_waves_doppler is often inaccurate. As an implication, the ground_range_current is therefore also often inaccurate.</p>
+<br />
+</section>
+<section id="std-ground-range-current">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">3.1.20. </span>std_ground_range_current</a><a class="headerlink" href="#std-ground-range-current" title="Link to this heading">#</a></h3>
+<p>The standard deviation of the sea surface current velocity in the ground range direction.</p>
+<br />
+</section>
+<section id="longitude">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">3.1.21. </span>longitude</a><a class="headerlink" href="#longitude" title="Link to this heading">#</a></h3>
+<p>Longitude as degrees east.</p>
+<br />
+</section>
+<section id="latitude">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">3.1.22. </span>latitude</a><a class="headerlink" href="#latitude" title="Link to this heading">#</a></h3>
+<p>Latitude as degrees north.</p>
+<br />
+</section>
+<section id="zero-doppler-time">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">3.1.23. </span>zero_doppler_time</a><a class="headerlink" href="#zero-doppler-time" title="Link to this heading">#</a></h3>
+<p>This variable provides the time of zero Doppler. It can be used to merge datasets in azimuth.</p>
+</section>
+</section>
+<section id="example-overview-of-variables">
+<h2><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">3.2. </span>Example Overview of Variables</a><a class="headerlink" href="#example-overview-of-variables" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+
+<span class="sd">&#39;&#39;&#39; The backslashes serves as line shifts &#39;&#39;&#39;</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;https://thredds.met.no/thredds/dodsC/</span><span class="se">\</span>
+<span class="s1">remotesensingenvisat/asar-doppler/2012/01/27/</span><span class="se">\</span>
+<span class="s1">ASA_WSDV2PRNMI20120127_215005_000612433111_00101_51839_0000.nc&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="printed-overview-of-variables">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink"><span class="section-number">3.2.1. </span>Printed Overview of Variables</a><a class="headerlink" href="#printed-overview-of-variables" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">data_vars</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data variables:
+    sensor_view_angle         (y, x) float32 2MB ...
+    sigma0                    (y, x) float32 2MB ...
+    subswath_number           (y, x) float32 2MB ...
+    incidence_angle           (y, x) float32 2MB ...
+    sensor_azimuth            (y, x) float32 2MB ...
+    dc                        (y, x) float32 2MB ...
+    dc_std                    (y, x) float32 2MB ...
+    topographic_height        (y, x) float32 2MB ...
+    valid_land_doppler        (y, x) float32 2MB ...
+    valid_sea_doppler         (y, x) float32 2MB ...
+    valid_doppler             (y, x) float32 2MB ...
+    electronic_mispointing    (y, x) float32 2MB ...
+    geometric_doppler         (y, x) float32 2MB ...
+    wind_waves_doppler        (y, x) float32 2MB ...
+    std_wind_waves_doppler    (y, x) float32 2MB ...
+    wind_direction            (y, x) float32 2MB ...
+    wind_speed                (y, x) float32 2MB ...
+    geophysical_doppler       (y, x) float32 2MB ...
+    ground_range_current      (y, x) float32 2MB ...
+    std_ground_range_current  (y, x) float32 2MB ...
+    longitude                 (y, x) float32 2MB ...
+    latitude                  (y, x) float32 2MB ...
+    crs                       int32 4B ...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="interactive-overview-of-dataset">
+<h3><a class="toc-backref" href="#id28" role="doc-backlink"><span class="section-number">3.2.2. </span>Interactive Overview of Dataset</a><a class="headerlink" href="#interactive-overview-of-dataset" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Interactive if opened as a HTML, jupyter notebook</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1f1f1f;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 45MB
+Dimensions:                   (y: 602, x: 851, zero_doppler_time: 602)
+Coordinates:
+  * zero_doppler_time         (zero_doppler_time) datetime64[ns] 5kB 2012-01-...
+Dimensions without coordinates: y, x
+Data variables: (12/23)
+    sensor_view_angle         (y, x) float32 2MB ...
+    sigma0                    (y, x) float32 2MB ...
+    subswath_number           (y, x) float32 2MB ...
+    incidence_angle           (y, x) float32 2MB ...
+    sensor_azimuth            (y, x) float32 2MB ...
+    dc                        (y, x) float32 2MB ...
+    ...                        ...
+    geophysical_doppler       (y, x) float32 2MB ...
+    ground_range_current      (y, x) float32 2MB ...
+    std_ground_range_current  (y, x) float32 2MB ...
+    longitude                 (y, x) float32 2MB ...
+    latitude                  (y, x) float32 2MB ...
+    crs                       int32 4B ...
+Attributes: (12/60)
+    GDAL:                       GDAL 3.2.1, released 2020/12/29
+    acknowledgement:            GSAR IDL pre-processing software was develope...
+    azimuth_start_time:         2012-01-27T21:50:05.173597
+    contributor_email:          jeong-won.park@kopri.re.kr, hjoh@norceresearc...
+    contributor_institution:    Korea Polar Research Institute (KOPRI), NORCE...
+    contributor_name:           Jeong-Won Park, Harald Johnsen, Geir Engen, M...
+    ...                         ...
+    time_coverage_end:          2012-01-27T21:51:07.925870+00:00
+    time_coverage_start:        2012-01-27T21:50:04.077748+00:00
+    title:                      Calibrated geophysical ENVISAT ASAR wide-swat...
+    title_lang:                 en
+    summary_no:                 Kalibrert geofysisk Dopplerskift fra ENVISAT ...
+    title_no:                   Kalibrert geofysisk ENVISAT ASAR Dopplerskift...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-13d130a7-d2af-4970-8165-04c23e57695b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-13d130a7-d2af-4970-8165-04c23e57695b' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>y</span>: 602</li><li><span>x</span>: 851</li><li><span class='xr-has-index'>zero_doppler_time</span>: 602</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-a0d03d46-d622-4a87-9096-b64bc1ebb7d9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a0d03d46-d622-4a87-9096-b64bc1ebb7d9' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>zero_doppler_time</span></div><div class='xr-var-dims'>(zero_doppler_time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2012-01-27T21:50:05.266184997 .....</div><input id='attrs-48a350a1-24c2-4c89-ad08-a0df1b0fadf5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-48a350a1-24c2-4c89-ad08-a0df1b0fadf5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c8cfd160-864f-4148-aa4f-da972a6be032' class='xr-var-data-in' type='checkbox'><label for='data-c8cfd160-864f-4148-aa4f-da972a6be032' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Zero Doppler Time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2012-01-27T21:50:05.266184997&#x27;, &#x27;2012-01-27T21:50:05.367912997&#x27;,
+       &#x27;2012-01-27T21:50:05.469640989&#x27;, ..., &#x27;2012-01-27T21:51:06.201256503&#x27;,
+       &#x27;2012-01-27T21:51:06.302986850&#x27;, &#x27;2012-01-27T21:51:06.404713382&#x27;],
+      shape=(602,), dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-922f4188-4cee-40f7-bf80-9114ba0003d7' class='xr-section-summary-in' type='checkbox'  ><label for='section-922f4188-4cee-40f7-bf80-9114ba0003d7' class='xr-section-summary' >Data variables: <span>(23)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sensor_view_angle</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1e1bac62-8ada-40b8-bec0-ae22e9b1c7e0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1e1bac62-8ada-40b8-bec0-ae22e9b1c7e0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e0d35a91-138a-4772-897e-c2255d7691a4' class='xr-var-data-in' type='checkbox'><label for='data-e0d35a91-138a-4772-897e-c2255d7691a4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sensor View Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>sensor_view_angle</dd><dt><span>standard_name :</span></dt><dd>sensor_view_angle</dd><dt><span>units :</span></dt><dd>degree</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sigma0</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3312c0ca-cb7a-42f4-9083-7463251ebb11' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3312c0ca-cb7a-42f4-9083-7463251ebb11' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-562f92e9-8f5c-4755-ab8e-4d86192fc8d6' class='xr-var-data-in' type='checkbox'><label for='data-562f92e9-8f5c-4755-ab8e-4d86192fc8d6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Normalized Radar Cross Section</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>comment :</span></dt><dd>The NRCS is adjusted by normalization with the range antenna pattern but is not calibrated</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>name :</span></dt><dd>sigma0</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>short_name :</span></dt><dd>NRCS</dd><dt><span>standard_name :</span></dt><dd>surface_backwards_scattering_coefficient_of_radar_wave</dd><dt><span>units :</span></dt><dd>m/m</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>subswath_number</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7dc76b50-51a8-45dc-af1e-a3fd0e4c8b75' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7dc76b50-51a8-45dc-af1e-a3fd0e4c8b75' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-576d8c70-e0f3-4bb5-a411-c91c7bffb6fb' class='xr-var-data-in' type='checkbox'><label for='data-576d8c70-e0f3-4bb5-a411-c91c7bffb6fb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>per pixel subswath number</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>flag_meanings :</span></dt><dd>subswath_1_near_range subswath_2 subswath_3 subwaths_4 subswath_5_far_range</dd><dt><span>flag_values :</span></dt><dd>[1 2 3 4 5]</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>name :</span></dt><dd>subswath_number</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>incidence_angle</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-552b02bf-3d48-41a3-af8b-fb8119566e35' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-552b02bf-3d48-41a3-af8b-fb8119566e35' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d77863ff-b83d-4bb0-a4d7-31d667d6a883' class='xr-var-data-in' type='checkbox'><label for='data-d77863ff-b83d-4bb0-a4d7-31d667d6a883' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Incidence Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>incidence_angle</dd><dt><span>short_name :</span></dt><dd>incidence_angle</dd><dt><span>standard_name :</span></dt><dd>angle_of_incidence</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>sensor_azimuth</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-73527204-4195-4e6a-89b9-09d89ed849a5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-73527204-4195-4e6a-89b9-09d89ed849a5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7667d80c-2e09-431c-8842-c9321a545f67' class='xr-var-data-in' type='checkbox'><label for='data-7667d80c-2e09-431c-8842-c9321a545f67' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sensor Azimuth Angle</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>15 45</dd><dt><span>name :</span></dt><dd>sensor_azimuth</dd><dt><span>short_name :</span></dt><dd>sensor_azimuth</dd><dt><span>standard_name :</span></dt><dd>sensor_azimuth_angle</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>dc</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-bca8c2ba-1790-4cb4-9941-6907851e9df9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-bca8c2ba-1790-4cb4-9941-6907851e9df9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f38c9f7-fb12-40bb-b7ad-9dc16fe57ac4' class='xr-var-data-in' type='checkbox'><label for='data-9f38c9f7-fb12-40bb-b7ad-9dc16fe57ac4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler Centroid frequency shift</dd><dt><span>ancillary_variables :</span></dt><dd>dc_std</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.phase</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>0 2148</dd><dt><span>name :</span></dt><dd>dc</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>dc_std</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5a48d90b-e652-4ed5-9107-c77d89348e06' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5a48d90b-e652-4ed5-9107-c77d89348e06' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-31d88dbe-c91f-4442-9070-a4929cdb9ead' class='xr-var-data-in' type='checkbox'><label for='data-31d88dbe-c91f-4442-9070-a4929cdb9ead' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler Centroid frequency shift standard deviation</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.thermal</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>0 5</dd><dt><span>name :</span></dt><dd>dc_std</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>topographic_height</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ce7b9ddd-bd04-473f-97db-2b1516a16df1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ce7b9ddd-bd04-473f-97db-2b1516a16df1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f2b0d0fb-6d0a-42b0-84cc-1554e815f59f' class='xr-var-data-in' type='checkbox'><label for='data-f2b0d0fb-6d0a-42b0-84cc-1554e815f59f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Topographic Height</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.topo</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>institution :</span></dt><dd>U.S. Geological Survey</dd><dt><span>name :</span></dt><dd>topographic_height</dd><dt><span>references :</span></dt><dd>https://www.usgs.gov/coastal-changes-and-impacts/gmted2010</dd><dt><span>standard_name :</span></dt><dd>surface_height_above_geopotential_datum</dd><dt><span>title :</span></dt><dd>Global Multi-resolution Terrain Elevation Data (GMTED2010)</dd><dt><span>units :</span></dt><dd>m</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_land_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1ffacc11-6178-40cf-a0fe-cafff972bc57' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1ffacc11-6178-40cf-a0fe-cafff972bc57' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-10e7b92d-f3b8-492b-8341-3a76dfbbd9fa' class='xr-var-data-in' type='checkbox'><label for='data-10e7b92d-f3b8-492b-8341-3a76dfbbd9fa' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid land pixels</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>flag_meanings :</span></dt><dd>invalid valid</dd><dt><span>flag_values :</span></dt><dd>[0 1]</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>name :</span></dt><dd>valid_land_doppler</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_sea_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9916c5b5-c855-4bef-9378-6f0072cdcd58' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9916c5b5-c855-4bef-9378-6f0072cdcd58' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-60702a48-eb17-4f08-a5fa-ef587ea88960' class='xr-var-data-in' type='checkbox'><label for='data-60702a48-eb17-4f08-a5fa-ef587ea88960' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid water covering pixels</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>flag_meanings :</span></dt><dd>invalid valid</dd><dt><span>flag_values :</span></dt><dd>[0 1]</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>name :</span></dt><dd>valid_sea_doppler</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>valid_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c55bbe1c-f6db-41b3-a30f-2bf4968dd879' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c55bbe1c-f6db-41b3-a30f-2bf4968dd879' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-83933949-e48a-493c-852d-72b42e3f0463' class='xr-var-data-in' type='checkbox'><label for='data-83933949-e48a-493c-852d-72b42e3f0463' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Valid pixels</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.gray</dd><dt><span>dataType :</span></dt><dd>3</dd><dt><span>flag_meanings :</span></dt><dd>invalid valid_land valid_water</dd><dt><span>flag_values :</span></dt><dd>[0 1 2]</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>name :</span></dt><dd>valid_doppler</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>electronic_mispointing</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ad5bb59f-e608-488e-9e62-7a065530b365' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ad5bb59f-e608-488e-9e62-7a065530b365' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b1218a68-00d1-47a0-9dbd-b3e2ba174154' class='xr-var-data-in' type='checkbox'><label for='data-b1218a68-00d1-47a0-9dbd-b3e2ba174154' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler frequency shift due to electronic mispointing</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>-200 200</dd><dt><span>name :</span></dt><dd>electronic_mispointing</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>geometric_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e5649e14-2db1-4595-a8d6-aba7bef36dd1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e5649e14-2db1-4595-a8d6-aba7bef36dd1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a601e489-734c-42b0-9d8a-16f9597be13d' class='xr-var-data-in' type='checkbox'><label for='data-a601e489-734c-42b0-9d8a-16f9597be13d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Doppler frequency shift due to orbit geometry</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>-200 200</dd><dt><span>name :</span></dt><dd>geometric_doppler</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_waves_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-09991616-3243-4f93-a1d4-0d8faed387b4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-09991616-3243-4f93-a1d4-0d8faed387b4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2671a286-f4b0-4a5a-a124-d3576bcdd2a6' class='xr-var-data-in' type='checkbox'><label for='data-2671a286-f4b0-4a5a-a124-d3576bcdd2a6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Radar Doppler frequency shift due to wind waves</dd><dt><span>ancillary_variables :</span></dt><dd>std_wind_waves_doppler valid_sea_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>-60 60</dd><dt><span>name :</span></dt><dd>wind_waves_doppler</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>std_wind_waves_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5ca7590b-a46c-4a3b-ad79-70a07757030a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5ca7590b-a46c-4a3b-ad79-70a07757030a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5f105ffc-5035-4a1e-84cf-52f8fdefff57' class='xr-var-data-in' type='checkbox'><label for='data-5f105ffc-5035-4a1e-84cf-52f8fdefff57' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard deviation of radar Doppler frequency shift due to wind waves</dd><dt><span>ancillary_variables :</span></dt><dd>valid_sea_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.thermal</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>minmax :</span></dt><dd>0 10</dd><dt><span>name :</span></dt><dd>std_wind_waves_doppler</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_direction</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-48f6bdd6-3c1d-42db-b183-8c014e923048' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-48f6bdd6-3c1d-42db-b183-8c014e923048' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b5cbd75a-71d1-481b-bd5f-e240b542f835' class='xr-var-data-in' type='checkbox'><label for='data-b5cbd75a-71d1-481b-bd5f-e240b542f835' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>SAR look relative ERA5 reanalysis wind-from direction used in CDOP calculation</dd><dt><span>ancillary_variables :</span></dt><dd>valid_sea_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.phase</dd><dt><span>comment :</span></dt><dd>ECMWF Atmospheric Reanalysis v5 (ERA5) generated using Copernicus Climate Change Service information [2021]</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>institution :</span></dt><dd>European Centre for Medium Range Weather Forecasts (ECMWF)</dd><dt><span>minmax :</span></dt><dd>0 360</dd><dt><span>name :</span></dt><dd>wind_direction</dd><dt><span>references :</span></dt><dd>https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5</dd><dt><span>title :</span></dt><dd>ECMWF Atmospheric Reanalysis v5 (ERA5)</dd><dt><span>units :</span></dt><dd>degree</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>wind_speed</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5b2686c6-b59e-495e-ac95-15dcd37a4819' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5b2686c6-b59e-495e-ac95-15dcd37a4819' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-77e930ea-26ae-4f8f-a9ac-b048fea10305' class='xr-var-data-in' type='checkbox'><label for='data-77e930ea-26ae-4f8f-a9ac-b048fea10305' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>ERA5 reanalysis wind speed used in CDOP calculation</dd><dt><span>ancillary_variables :</span></dt><dd>valid_sea_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.haline</dd><dt><span>comment :</span></dt><dd>ECMWF Atmospheric Reanalysis v5 (ERA5) generated using Copernicus Climate Change Service information [2021]</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>grid_mapping :</span></dt><dd>crs</dd><dt><span>institution :</span></dt><dd>European Centre for Medium Range Weather Forecasts (ECMWF)</dd><dt><span>minmax :</span></dt><dd>0 20</dd><dt><span>name :</span></dt><dd>wind_speed</dd><dt><span>references :</span></dt><dd>https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5</dd><dt><span>short_name :</span></dt><dd>W</dd><dt><span>standard_name :</span></dt><dd>wind_speed</dd><dt><span>title :</span></dt><dd>ECMWF Atmospheric Reanalysis v5 (ERA5)</dd><dt><span>units :</span></dt><dd>m s-1</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>geophysical_doppler</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8212cc3f-2a27-4aae-8e98-6ee40126bba1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8212cc3f-2a27-4aae-8e98-6ee40126bba1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1b1964a6-8a0a-4cd2-b4d3-2e7a0630de56' class='xr-var-data-in' type='checkbox'><label for='data-1b1964a6-8a0a-4cd2-b4d3-2e7a0630de56' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Radar Doppler frequency shift due to surface velocity</dd><dt><span>ancillary_variables :</span></dt><dd>valid_land_doppler valid_sea_doppler valid_doppler wind_waves_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>comment :</span></dt><dd>The zero Doppler offset correction method is given by the attribute &#x27;offset_correction_method&#x27; and the offset is given by the attribute &#x27;offset_value&#x27;.</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-60 60</dd><dt><span>name :</span></dt><dd>geophysical_doppler</dd><dt><span>offset_correction_method :</span></dt><dd>none</dd><dt><span>offset_value :</span></dt><dd>0</dd><dt><span>units :</span></dt><dd>Hz</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>ground_range_current</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-333ee057-d49b-4ea2-943a-374fa4580f66' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-333ee057-d49b-4ea2-943a-374fa4580f66' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7e69d2e3-0757-481a-9440-a627d74ccf4d' class='xr-var-data-in' type='checkbox'><label for='data-7e69d2e3-0757-481a-9440-a627d74ccf4d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea surface current velocity in ground range direction</dd><dt><span>ancillary_variables :</span></dt><dd>std_ground_range_current valid_sea_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.balance</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-1.5 1.5</dd><dt><span>name :</span></dt><dd>ground_range_current</dd><dt><span>units :</span></dt><dd>m s-1</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>std_ground_range_current</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8ecc111e-0d95-4768-9bb8-f6dd71ad22a2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8ecc111e-0d95-4768-9bb8-f6dd71ad22a2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f1e15ed2-cc51-4370-81cb-1060698bee31' class='xr-var-data-in' type='checkbox'><label for='data-f1e15ed2-cc51-4370-81cb-1060698bee31' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Standard deviation of sea surface current velocity in ground range direction</dd><dt><span>ancillary_variables :</span></dt><dd>valid_sea_doppler</dd><dt><span>colormap :</span></dt><dd>cmocean.cm.thermal</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>0 0.8</dd><dt><span>name :</span></dt><dd>std_ground_range_current</dd><dt><span>units :</span></dt><dd>m s-1</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-dbff6e47-7546-4deb-ac60-2cb379503675' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dbff6e47-7546-4deb-ac60-2cb379503675' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-56411b3e-dc19-4278-9735-ba250510c24f' class='xr-var-data-in' type='checkbox'><label for='data-56411b3e-dc19-4278-9735-ba250510c24f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>colormap :</span></dt><dd>jet</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-180 180</dd><dt><span>name :</span></dt><dd>longitude</dd><dt><span>short_name :</span></dt><dd>longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-24fd4892-cf98-4912-acb6-d7271862d00b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-24fd4892-cf98-4912-acb6-d7271862d00b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d786fd30-10cb-4113-89d0-b57486263dc1' class='xr-var-data-in' type='checkbox'><label for='data-d786fd30-10cb-4113-89d0-b57486263dc1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>colormap :</span></dt><dd>jet</dd><dt><span>dataType :</span></dt><dd>6</dd><dt><span>minmax :</span></dt><dd>-90 90</dd><dt><span>name :</span></dt><dd>latitude</dd><dt><span>short_name :</span></dt><dd>latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[512302 values with dtype=float32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>crs</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c8ead53f-f627-44a6-99c5-1b7acc12d1bd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c8ead53f-f627-44a6-99c5-1b7acc12d1bd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1be51439-2611-4eab-9417-1d0a56a64f24' class='xr-var-data-in' type='checkbox'><label for='data-1be51439-2611-4eab-9417-1d0a56a64f24' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>inverse_flattening :</span></dt><dd>298.257223563</dd><dt><span>grid_mapping_name :</span></dt><dd>latitude_longitude</dd><dt><span>longitude_of_prime_meridian :</span></dt><dd>0.0</dd><dt><span>semi_major_axis :</span></dt><dd>6378137.0</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=int32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-53ee9069-bb16-4062-8bfd-3fb7eca8b1bc' class='xr-section-summary-in' type='checkbox'  ><label for='section-53ee9069-bb16-4062-8bfd-3fb7eca8b1bc' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>zero_doppler_time</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-a9e9319c-8e6e-42d3-95c2-e7e5a5fe75dc' class='xr-index-data-in' type='checkbox'/><label for='index-a9e9319c-8e6e-42d3-95c2-e7e5a5fe75dc' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2012-01-27 21:50:05.266184997&#x27;,
+               &#x27;2012-01-27 21:50:05.367912997&#x27;,
+               &#x27;2012-01-27 21:50:05.469640989&#x27;,
+               &#x27;2012-01-27 21:50:05.571369011&#x27;,
+               &#x27;2012-01-27 21:50:05.673097004&#x27;,
+               &#x27;2012-01-27 21:50:05.774825026&#x27;,
+               &#x27;2012-01-27 21:50:05.876552988&#x27;,
+               &#x27;2012-01-27 21:50:05.978281010&#x27;,
+               &#x27;2012-01-27 21:50:06.080008973&#x27;,
+               &#x27;2012-01-27 21:50:06.181737055&#x27;,
+               ...
+               &#x27;2012-01-27 21:51:05.489159335&#x27;,
+               &#x27;2012-01-27 21:51:05.590889682&#x27;,
+               &#x27;2012-01-27 21:51:05.692616214&#x27;,
+               &#x27;2012-01-27 21:51:05.794346560&#x27;,
+               &#x27;2012-01-27 21:51:05.896073092&#x27;,
+               &#x27;2012-01-27 21:51:05.997799624&#x27;,
+               &#x27;2012-01-27 21:51:06.099529971&#x27;,
+               &#x27;2012-01-27 21:51:06.201256503&#x27;,
+               &#x27;2012-01-27 21:51:06.302986850&#x27;,
+               &#x27;2012-01-27 21:51:06.404713382&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;zero_doppler_time&#x27;, length=602, freq=None))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6a2bb0b3-aecf-49f9-a3d2-5b95f9108f4d' class='xr-section-summary-in' type='checkbox'  ><label for='section-6a2bb0b3-aecf-49f9-a3d2-5b95f9108f4d' class='xr-section-summary' >Attributes: <span>(60)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>GDAL :</span></dt><dd>GDAL 3.2.1, released 2020/12/29</dd><dt><span>acknowledgement :</span></dt><dd>GSAR IDL pre-processing software was developed by NORCE. The project was supported by the Norwegian Space Agency and the ESA Network of Resources Initiative.</dd><dt><span>azimuth_start_time :</span></dt><dd>2012-01-27T21:50:05.173597</dd><dt><span>contributor_email :</span></dt><dd>jeong-won.park@kopri.re.kr, hjoh@norceresearch.no, geen@norceresearch.no, mortenwh@met.no, mortenwh@met.no</dd><dt><span>contributor_institution :</span></dt><dd>Korea Polar Research Institute (KOPRI), NORCE, NORCE, Norwegian Meteorological Institute, Norwegian Meteorological Institute</dd><dt><span>contributor_name :</span></dt><dd>Jeong-Won Park, Harald Johnsen, Geir Engen, Morten Wergeland Hansen, Morten Wergeland Hansen</dd><dt><span>contributor_role :</span></dt><dd>Investigator, Investigator, Investigator, Technical contact, Metadata author</dd><dt><span>Conventions :</span></dt><dd>CF-1.8, ACDD-1.3</dd><dt><span>creator_email :</span></dt><dd>mortenwh@met.no</dd><dt><span>creator_institution :</span></dt><dd>Norwegian Meteorological Institute (MET Norway)</dd><dt><span>creator_name :</span></dt><dd>Morten Wergeland Hansen</dd><dt><span>creator_role :</span></dt><dd>Investigator</dd><dt><span>creator_type :</span></dt><dd>person</dd><dt><span>dataset_production_status :</span></dt><dd>Complete</dd><dt><span>date_created :</span></dt><dd>2025-01-13T17:11:17.578086+00:00</dd><dt><span>date_created_type :</span></dt><dd>Created</dd><dt><span>doi :</span></dt><dd>https://doi.org/10.57780/esa-56fb232</dd><dt><span>doppler_code_resource :</span></dt><dd>https://github.com/mortenwh/doppler</dd><dt><span>doppler_code_version :</span></dt><dd>384468bb68a3f78c10efbf87f1e08e777713eee4</dd><dt><span>geospatial_bounds :</span></dt><dd>POLYGON ((27.79 -173.37, 27.91 -174.02, 28.01 -174.56, 28.09 -175.00, 28.16 -175.41, 28.22 -175.80, 28.29 -176.17, 28.34 -176.47, 28.38 -176.75, 28.44 -177.08, 28.49 -177.40, 28.49 -177.40, 28.13 -177.47, 27.77 -177.55, 27.40 -177.62, 27.04 -177.70, 26.68 -177.77, 26.32 -177.84, 25.96 -177.92, 25.60 -177.99, 25.23 -178.06, 24.87 -178.14, 24.87 -178.14, 24.81 -177.83, 24.76 -177.51, 24.71 -177.24, 24.66 -176.95, 24.59 -176.59, 24.53 -176.21, 24.46 -175.82, 24.37 -175.39, 24.28 -174.87, 24.15 -174.24, 24.15 -174.24, 24.52 -174.16, 24.89 -174.07, 25.25 -173.98, 25.61 -173.90, 25.97 -173.81, 26.34 -173.72, 26.70 -173.63, 27.06 -173.55, 27.42 -173.46, 27.79 -173.37))</dd><dt><span>geospatial_bounds_crs :</span></dt><dd>EPSG:4326</dd><dt><span>geospatial_lat_max :</span></dt><dd>28.48928</dd><dt><span>geospatial_lat_min :</span></dt><dd>24.15394</dd><dt><span>geospatial_lon_max :</span></dt><dd>-173.36919</dd><dt><span>geospatial_lon_min :</span></dt><dd>-178.13857</dd><dt><span>history :</span></dt><dd>2025-01-13T17:06:36.817424+00:00: sar_doppler.utils.create_merged_swaths(ds, EPSG=4326)
+2025-01-13T17:11:17.578065+00:00: sar_doppler.models.Dataset.objects.export2netcdf(n, ds, filename=&#x27;/lustre/storeB/project/fou/fd/project/sar-doppler/products/sar_doppler/merged/2012/01/27/ASA_WSDV2PRNMI20120127_215005_000612433111_00101_51839_0000.nc&#x27;)</dd><dt><span>id :</span></dt><dd>0f79d40f-f312-4b84-b609-e9da275ec88e</dd><dt><span>institution :</span></dt><dd>Norwegian Meteorological Institute (MET Norway)</dd><dt><span>instrument :</span></dt><dd>Advanced Synthetic Aperture Radar (ASAR)</dd><dt><span>instrument_vocabulary :</span></dt><dd>https://space.oscar.wmo.int/instruments/view/asar</dd><dt><span>iso_topic_category :</span></dt><dd>oceans</dd><dt><span>keywords :</span></dt><dd>GCMDSK:RADAR BACKSCATTER,GCMDSK:RADAR IMAGERY,GCMDSK:RADIAL VELOCITY,GEMET:Oceanographic geographical features, NORTHEMES:Weather and climate</dd><dt><span>keywords_vocabulary :</span></dt><dd>GCMDSK:NASA/GCMD Earth Science Keywords:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords, GEMET:GEMET - INSPIRE themes:https://www.eionet.europa.eu/gemet/en/inspire-themes/, NORTHEMES:GeoNorge Themes:https://register.geonorge.no/metadata-kodelister/nasjonal-temainndeling</dd><dt><span>license :</span></dt><dd>https://earth.esa.int/eogateway/documents/20142/1564626/ESA-Data-Policy-ESA-PB-EO-2010-54.pdf (ESA earth observation data policy)</dd><dt><span>naming_authority :</span></dt><dd>no.met</dd><dt><span>nansat_code_resource :</span></dt><dd>https://github.com/mortenwh/nansat</dd><dt><span>nansat_code_version :</span></dt><dd>ae61f242db16795f32f36c1e9b5bd47c0f9ad387</dd><dt><span>orbit_direction :</span></dt><dd>descending</dd><dt><span>originating_file :</span></dt><dd>/lustre/storeB/project/fou/fd/project/sar-doppler/2012/01/27/RVL_ASA_WS_20120127215005174.gsar</dd><dt><span>platform :</span></dt><dd>Environmental Satellite (Envisat)</dd><dt><span>platform_vocabulary :</span></dt><dd>https://space.oscar.wmo.int/satelliteprogrammes/view/envisat</dd><dt><span>polarization :</span></dt><dd>VV</dd><dt><span>processing_level :</span></dt><dd>Scientific</dd><dt><span>project :</span></dt><dd>Norwegian Space Agency project JOP.06.20.2: Reprocessing and analysis of historical data for future operationalization of Doppler shifts from SAR, NMI/ESA-NoR Envisat ASAR Doppler centroid shift processing ID220131, Improved knowledge of high latitude ocean circulation with Synthetic Aperture Radar (ESA Prodex ISAR), Drift estimation of sea ice in the Arctic Ocean and sub-Arctic Seas (ESA Prodex DESIce)</dd><dt><span>publisher_email :</span></dt><dd>data-management-group@met.no</dd><dt><span>publisher_name :</span></dt><dd>Norwegian Meteorological Institute</dd><dt><span>publisher_type :</span></dt><dd>institution</dd><dt><span>publisher_url :</span></dt><dd>https://www.met.no/</dd><dt><span>sar_doppler_code_resource :</span></dt><dd>https://github.com/mortenwh/django-geo-spaas-sar-doppler</dd><dt><span>sar_doppler_code_version :</span></dt><dd>a0ec441ac14886b06572830ef21a529953fdb4bb</dd><dt><span>source :</span></dt><dd>Space Borne Instrument</dd><dt><span>spatial_representation :</span></dt><dd>grid</dd><dt><span>summary :</span></dt><dd>Calibrated geophysical range Doppler frequency shift retrievals from an ENVISAT ASAR wide-swath acquisition obtained on 2012-01-27T21:50:05.161103+00:00. The geophysical Doppler shift depends on the ocean wave-state and the sea surface current. In the absence of current, the geophysical Doppler shift is mostly related to the local wind speed and direction. The present dataset is in VV polarization.</dd><dt><span>summary_lang :</span></dt><dd>en</dd><dt><span>time_coverage_end :</span></dt><dd>2012-01-27T21:51:07.925870+00:00</dd><dt><span>time_coverage_start :</span></dt><dd>2012-01-27T21:50:04.077748+00:00</dd><dt><span>title :</span></dt><dd>Calibrated geophysical ENVISAT ASAR wide-swath range Doppler frequency shift retrievals in VV polarisation, 2012-01-27T21:50:05.161103+00:00</dd><dt><span>title_lang :</span></dt><dd>en</dd><dt><span>summary_no :</span></dt><dd>Kalibrert geofysisk Dopplerskift fra ENVISAT ASAR målt 2012-01-27T21:50:05.161103+00:00. Det geofysiske Dopplerskiftet avhenger av havbølgetilstand og overflatestrøm. Ved fravær av strøm er det geofysiske Dopplerskiftet stort sett relatert til den lokale vindhastigheten og dens retning. Foreliggende datasett er i VV polarisering.</dd><dt><span>title_no :</span></dt><dd>Kalibrert geofysisk ENVISAT ASAR Dopplerskift i full bildebredde og VV polarisering, 2012-01-27T21:50:05.161103+00:00</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Use_and_Visualise_Data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Use and Visualise Data</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-variables">3.1. List of Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-view-angle">3.1.1. sensor_view_angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma0">3.1.2. sigma0</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subswath-number">3.1.3. subswath_number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incidence-angle">3.1.4. incidence_angle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sensor-azimuth">3.1.5. sensor_azimuth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dc">3.1.6. dc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-std">3.1.7. dc_std</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#topographic-height">3.1.8. topographic_height</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-land-doppler">3.1.9. valid_land_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-sea-doppler">3.1.10. valid_sea_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valid-doppler">3.1.11. valid_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-mispointing">3.1.12. electronic_mispointing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-doppler">3.1.13. geometric_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-waves-doppler">3.1.14. wind_waves_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#std-wind-waves-doppler">3.1.15. std_wind_waves_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-direction">3.1.16. wind_direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wind-speed">3.1.17. wind_speed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geophysical-doppler">3.1.18. geophysical_doppler</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-range-current">3.1.19. ground_range_current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#std-ground-range-current">3.1.20. std_ground_range_current</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#longitude">3.1.21. longitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latitude">3.1.22. latitude</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-doppler-time">3.1.23. zero_doppler_time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-overview-of-variables">3.2. Example Overview of Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#printed-overview-of-variables">3.2.1. Printed Overview of Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-overview-of-dataset">3.2.2. Interactive Overview of Dataset</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By SAR Doppler User Guide
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
