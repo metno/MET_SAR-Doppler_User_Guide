@@ -14,6 +14,7 @@ defaults:  # The defaults key will be applied to all chapters and sub-sections
 
 chapters:
 # - file: intro#sar-doppler-user-guide   # Including the anchor to be able to refer to the file here as well
+- file: notebooks/Product_Format_Information
 - file: notebooks/Find_and_Access_Data
 - file: notebooks/Use_and_Visualise_Data
 - file: notebooks/Parameter_Descriptions
