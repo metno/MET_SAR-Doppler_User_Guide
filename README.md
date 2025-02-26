@@ -1,6 +1,6 @@
 # SAR-Doppler-user-guide
 
-User guide for SAR Doppler data - Online version of the user manual is available at: https://josteines.github.io/MET_SAR-Doppler_User_Guide.
+User guide for SAR Doppler data - Online version of the user manual is available at: https://metno.github.io/MET_SAR-Doppler_User_Guide/.
 
 To find the ipynb (jupyter notebook) files go to the notebooks folder.
 
