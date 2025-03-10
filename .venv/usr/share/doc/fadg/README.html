@@ -30,7 +30,7 @@
   <link href="../../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
@@ -164,9 +164,10 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Find_and_Access_Data.html">1. Find and Access Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Use_and_Visualise_Data.html">2. Use and Visualise Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Parameter_Descriptions.html">3. Parameter Descriptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Product_Format_Information.html">1. Product Format Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Find_and_Access_Data.html">2. Find and Access Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Use_and_Visualise_Data.html">3. Use and Visualise Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../notebooks/Parameter_Descriptions.html">4. Parameter Descriptions</a></li>
 </ul>
 
     </div>
@@ -385,7 +386,7 @@
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 <section id="find-datasets-matching-a-time-and-text-string">
 <h3>Find datasets matching a time and text string<a class="headerlink" href="#find-datasets-matching-a-time-and-text-string" title="Link to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fadg.find_and_collocate</span><span class="w"> </span><span class="kn">import</span> <span class="n">SearchCSW</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fadg.find_and_collocate</span> <span class="kn">import</span> <span class="n">SearchCSW</span>
 
 <span class="c1"># Find all SAR data dt/2 hours back in time from now:</span>
 <span class="n">sar</span> <span class="o">=</span> <span class="n">SearchCSW</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;SAR&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;https://data.csw.met.no/csw&quot;</span><span class="p">)</span>
@@ -394,7 +395,7 @@
 </section>
 <section id="get-opendap-urls-to-norkyst800-and-met-nordic">
 <h3>Get OPeNDAP urls to Norkyst800 and MET Nordic<a class="headerlink" href="#get-opendap-urls-to-norkyst800-and-met-nordic" title="Link to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fadg</span><span class="w"> </span><span class="kn">import</span> <span class="n">find_and_collocate</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fadg</span> <span class="kn">import</span> <span class="n">find_and_collocate</span>
 
 <span class="c1"># Specify a dataset url</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://thredds.met.no/thredds/dodsC/remotesensingsatellite/polar-swath/2024/04/07/metopb-avhrr-20240407222827-20240407223536.nc&quot;</span>
