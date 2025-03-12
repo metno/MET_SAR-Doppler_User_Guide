@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: SAR Doppler User Guide
-author: SAR Doppler User Guide
+author: Jostein Ekker Sloerdal, Morten Wergeland Hansen
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
