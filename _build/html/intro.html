@@ -143,8 +143,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/SAR_Doppler_Gulf_Stream.png" class="logo__image only-light" alt="SAR Doppler User Guide - Home"/>
+    <img src="_static/SAR_Doppler_Gulf_Stream.png" class="logo__image only-dark pst-js-only" alt="SAR Doppler User Guide - Home"/>
   
-    <p class="title logo__title">SAR Doppler User Guide</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -228,7 +234,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/metno/MET_SAR-Doppler_User_Guide" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -245,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/metno/MET_SAR-Doppler_User_Guide/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,10 +381,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sar-doppler-user-guide">
 <h1>SAR Doppler User Guide<a class="headerlink" href="#sar-doppler-user-guide" title="Link to this heading">#</a></h1>
-<p>This jupyter-book is to serve as a user manual on how to access, open, interact, visualize and plot SAR data. This refers to the calibrated geophysical range Doppler frequency shift retrievals from the ENVISAT ASAR wide-swath acqusitions obtained between 2002 and 2012.</p>
+<p>This Jupyter Book serves as a user manual on how to access, open, interact with, visualise, and plot SAR data. This refers to the calibrated geophysical range Doppler frequency shift retrievals from the ENVISAT ASAR wide-swath acquisitions obtained between 2002 and 2012.</p>
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
-<p>Below is a table of contents. Here you find topics on how to find, access and use the SAR Doppler data.</p>
+<p>Below is a table of contents. Here you will find topics on how to find, access, and use the SAR Doppler data.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Product_Format_Information.html">1. Product Format Information</a><ul>
@@ -393,21 +399,26 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Find_and_Access_Data.html">2. Find and Access Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#find-data-through-data-met-no">2.1. Find Data Through data.met.no</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#visualise-data-through-data-met-no">2.2. Visualise Data through data.met.no</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#access-datasets-through-data-met-no">2.3. Access datasets through data.met.no</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#access-datasets-through-thredds-met-no">2.4. Access datasets through thredds.met.no</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#find-data-through-data-met-no">2.1. Find Data Through data.met.no</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#map-features">2.1.1. Map Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#map-widgets">2.1.2. Map Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#search-filters">2.1.3. Search Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#visualise-data-through-data-met-no">2.2. Visualise Data Through data.met.no</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#access-datasets-through-data-met-no">2.3. Access Datasets Through data.met.no</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#access-datasets-through-thredds-met-no">2.4. Access Datasets Through thredds.met.no</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#how-to-open-datasets">2.5. How to Open Datasets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#opendap-using-xarray">2.5.1. OPENDAP - Using xarray:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#httpserver-download-using-xarray">2.5.2. HTTPServer (Download) - Using xarray:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#find-data-through-csw-catalog-service-on-the-web">2.6. Find Data through CSW (Catalog Service on the Web)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#find-data-through-csw-catalog-service-on-the-web">2.6. Find Data Through CSW (Catalog Service on the Web)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#get-parent-datasets-and-their-children-or-dataset-series-in-iso-19115-with-ogc-csw">2.6.1. Get Parent Datasets and their Children (or Dataset Series in ISO 19115) with OGC CSW</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#find-data-with-opensearch">2.6.2. Find Data with OpenSearch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#more-advanced-geographical-search-with-ogc-csw">2.6.3. More Advanced Geographical Search with OGC CSW</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#query-csw-endpoint-by-the-use-of-python">2.6.4. Query CSW Endpoint by the Use of Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#extract-the-opendap-urls">2.6.5. Extract the OPENDAP urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#extract-the-opendap-urls">2.6.5. Extract the OPENDAP URLs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/Find_and_Access_Data.html#query-csw-endpoint-by-the-use-of-an-http-post-from-the-terminal">2.6.6. Query CSW Endpoint by the Use of an HTTP POST (From the Terminal)</a></li>
 </ul>
 </li>
