@@ -409,11 +409,10 @@
 </li>
 </ul>
 </nav>
-<br /><p>This notebook highlights more spesific product information about the SAR Doppler data.</p>
 <br />
 <br /><section id="netcdf-file-format">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink"><span class="section-number">1.1. </span>NetCDF File Format</a><a class="headerlink" href="#netcdf-file-format" title="Link to this heading">#</a></h2>
-<p>NetCDF (Network Common Data Form) comprises software libraries and machine-independent data formats designed to facilitate the creation, access, and sharing of array-oriented scientific data. Additionally, it serves as a community standard for exchanging scientific data.</p>
+<p>The CF-NetCDF (Climate and Forecast - Network Common Data Format) standard is a self-describing file format that simplifies creation, access, and sharing of array-oriented scientific data. By sharing the data through thredds (REF), the ASAR Doppler shift data can be easily accessed and used by the online user community.</p>
 <br /><section id="qualities-of-netcdf">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">1.1.1. </span>Qualities of netCDF</a><a class="headerlink" href="#qualities-of-netcdf" title="Link to this heading">#</a></h3>
 <ul>
@@ -422,14 +421,9 @@
 <div><p>Each netCDF file contains metadata that details the data it holds.</p>
 </div></blockquote>
 </li>
-<li><p><strong>Portable</strong>:</p>
+<li><p><strong>Archivable</strong>:</p>
 <blockquote>
-<div><p>NetCDF files can be accessed on different computer systems, regardless of how they store integers, characters, and floating-point numbers.</p>
-</div></blockquote>
-</li>
-<li><p><strong>Scalable</strong>:</p>
-<blockquote>
-<div><p>NetCDF interfaces allow efficient access to small subsets of large datasets in various formats, even when stored on remote servers.</p>
+<div><p>All previous versions of netCDF data will remain accessible with the current and future releases of the software.</p>
 </div></blockquote>
 </li>
 <li><p><strong>Appendable</strong>:</p>
@@ -437,14 +431,19 @@
 <div><p>New data can be added to an existing netCDF file without the need to copy the entire dataset or alter its structure.</p>
 </div></blockquote>
 </li>
+<li><p><strong>Scalable</strong>:</p>
+<blockquote>
+<div><p>NetCDF interfaces allow efficient access to small subsets of large datasets in various formats, even when stored on remote servers.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Portable</strong>:</p>
+<blockquote>
+<div><p>NetCDF files can be accessed on different computer systems, regardless of how they store integers, characters, and floating-point numbers.</p>
+</div></blockquote>
+</li>
 <li><p><strong>Sharable</strong>:</p>
 <blockquote>
 <div><p>A single netCDF file can be accessed by one writer and multiple readers concurrently.</p>
-</div></blockquote>
-</li>
-<li><p><strong>Archivable</strong>:</p>
-<blockquote>
-<div><p>Access to all earlier forms of netCDF data will be supported by current and future versions of the software.</p>
 </div></blockquote>
 </li>
 </ul>
@@ -454,7 +453,7 @@
 <section id="filename-convention">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">1.2. </span>Filename Convention</a><a class="headerlink" href="#filename-convention" title="Link to this heading">#</a></h2>
 <p>ASAR RVL filenames follow the Envisat convention with the exception of the file ending “.nc” for NetCDF files. The format is:</p>
-<p><code class="docutils literal notranslate"><span class="pre">ASA_WSDp2PRNMIYYYYmmdd_HHMMSS_ddddddddPCCC_ooooo_aaaaa_00000.nc</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ASA_WSDp2PRNMIYYYYmmdd_HHMMSS_ddddddddPCCC_ooooo_aaaaa_iiiii.nc</span></code></p>
 <section id="components-of-the-filename">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">1.2.1. </span>Components of the Filename:</a><a class="headerlink" href="#components-of-the-filename" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -469,8 +468,9 @@
 <li><p><strong>CCC</strong>: Orbit cycle.</p></li>
 <li><p><strong>ooooo</strong>: Relative orbit number.</p></li>
 <li><p><strong>aaaaa</strong>: Absolute orbit number.</p></li>
+<li><p><strong>iiiii</strong>: Incremental counter number.</p></li>
+<li><p><strong>.nc</strong>: Product format extension (NetCDF).</p></li>
 </ul>
-<br />
 <br />
 </section>
 <section id="filename-examples">
@@ -482,6 +482,8 @@
 <li><p>With an orbit phase of 3 and orbit cycle of 113</p></li>
 <li><p>With a relative orbit number of 00267</p></li>
 <li><p>With an absolute orbit number of 52867</p></li>
+<li><p>With and incremental counter number of 00000</p></li>
+<li><p>With the NetCDf product format extension: “.nc”</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">ASA_WSDV2PRNMI20120408_110444_000617553113_00267_52867_0000.nc</span></code></p>
 <br />
@@ -492,6 +494,8 @@
 <li><p>With an orbit phase of 3 and orbit cycle of 113</p></li>
 <li><p>With a relative orbit number of 00264</p></li>
 <li><p>With an absolute orbit number of 52864</p></li>
+<li><p>With and incremental counter number of 00000</p></li>
+<li><p>With the NetCDf product format extension: “.nc”</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">ASA_WSDH2PRNMI20120408_064250_000622223113_00264_52864_0000.nc</span></code></p>
 </section>
