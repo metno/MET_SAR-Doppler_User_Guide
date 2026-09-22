@@ -64,7 +64,7 @@ pure_eval==0.2.3
 pybtex==0.24.0
 pybtex-docutils==1.0.3
 pydata-sphinx-theme==0.16.1
-Pygments==2.19.1
+Pygments==2.20.0
 pyparsing==3.2.1
 pyproj==3.7.0
 pyshp==2.3.1
